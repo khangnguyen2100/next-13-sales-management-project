@@ -3,7 +3,9 @@ import { create } from 'zustand';
 import { createCounterSlice } from './slices';
 import { CounterState } from './types';
 
-export const useStore = create<CounterState>((...a) => ({
+type Store = CounterState;
+
+export const useStore = create<Store>()((...a) => ({
   ...createCounterSlice(...a),
 }));
 
