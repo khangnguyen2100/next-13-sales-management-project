@@ -5,6 +5,7 @@
     "plugin:prettier/recommended",
     "plugin:import/recommended",
     "plugin:tailwindcss/recommended"
+    // "plugin:prettier/eslint-plugin-tailwindcss"
   ],
   "rules": {
     "prettier/prettier": [
