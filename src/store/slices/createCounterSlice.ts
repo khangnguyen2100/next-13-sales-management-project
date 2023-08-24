@@ -1,4 +1,5 @@
 import { StateCreator } from 'zustand';
+
 import { CounterState } from '../types/counter';
 
 const createCounterSlice: StateCreator<CounterState> = set => ({

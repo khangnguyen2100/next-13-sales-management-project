@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 
@@ -8,7 +9,7 @@ type Props = {
 
 const ClientLayout = (props: Props) => {
   return (
-    <div className='relative flex flex-col w-full mx-auto'>
+    <div className='relative mx-auto flex w-full flex-col'>
       <Header />
       {props.children}
       <Footer />

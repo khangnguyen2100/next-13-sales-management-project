@@ -8,5 +8,7 @@
   padding: 0;
 }
 body {
-  padding: 0 1rem;
+}
+p {
+  line-height: 1.5;
 }

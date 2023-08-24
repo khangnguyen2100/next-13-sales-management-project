@@ -2,7 +2,7 @@ import { CircularProgress } from '@/components/Mui';
 
 export default function Loading() {
   return (
-    <div className='w-full min-h-screen grid place-items-center'>
+    <div className='grid min-h-screen w-full place-items-center'>
       <CircularProgress />
     </div>
   );
