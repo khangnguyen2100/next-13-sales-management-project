@@ -117,10 +117,10 @@ const ContactItem = ({ props }: { props: ContactItemProp }) => {
   return (
     <div className='flex items-center gap-x-[10px]'>
       {/* icon */}
-      <div className='flex h-[68px] w-[68px] items-center justify-center rounded-full bg-section-3 '>
+      <div className='flex h-[68px] w-[68px] items-center justify-center rounded-full bg-section-3 mdd:h-[50px] mdd:w-[50px]'>
         <Image src={icon} width={26} height={26} alt={heading} />
       </div>
-      <div className='flex flex-col gap-y-1 font-montserrat text-white'>
+      <div className='flex flex-col font-montserrat text-white md:gap-y-1'>
         <h4 className='text-lg font-semibold'>{heading}</h4>
         <p className=''>{description}</p>
       </div>
@@ -132,9 +132,9 @@ const ContactItem = ({ props }: { props: ContactItemProp }) => {
 const Footer = () => {
   return (
     <div className='mt-[140px] w-full bg-section-1'>
-      <div className='mx-auto my-24 max-w-large mdd:my-14 mdd:px-4'>
+      <div className='mx-auto my-24 max-w-large mdd:my-10 mdd:px-4'>
         {/* header */}
-        <div className='flex justify-between md:items-center mdd:flex-col mdd:gap-10'>
+        <div className='flex justify-between md:items-center mdd:flex-col mdd:gap-6'>
           {/* logo */}
           <Image src={Logo} alt='beeSmart-logo' height={55} width={186} />
           {/* icons */}
