@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .transition-sm {
+    transition: all 0.2s ease;
+  }
+  .transition-md {
+    transition: all 0.3s ease;
+  }
+  .transition-lg {
+    transition: all 0.4s ease;
+  }
+  .transition-xl {
+    transition: all 0.5s ease;
+  }
+  .abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,6 +43,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-quicksand);
+  font-weight: bold;
 }
 span {
   font-family: inherit;
