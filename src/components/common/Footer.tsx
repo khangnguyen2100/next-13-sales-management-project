@@ -92,16 +92,14 @@ const ColLinks = ({ props }: { props: FooterColumnLink }) => {
     <div className='flex flex-col'>
       <div className='mb-10 flex items-center gap-x-[5px]'>
         <div className='h-4 w-4 bg-primary'></div>
-        <h3 className='block font-montserrat text-lg font-semibold text-typo-2'>
-          {heading}
-        </h3>
+        <h3 className='block  text-lg font-semibold text-typo-2'>{heading}</h3>
       </div>
       {/* links */}
       {links.map((link, i) => {
         return (
           <Link
             key={i}
-            className='mb-3 block font-montserrat leading-6 text-white hover:text-typo-2'
+            className='mb-3 block  leading-6 text-white hover:text-typo-2'
             href={link.href}
           >
             {link.label}
@@ -120,7 +118,7 @@ const ContactItem = ({ props }: { props: ContactItemProp }) => {
       <div className='flex h-[68px] w-[68px] items-center justify-center rounded-full bg-section-3 mdd:h-[50px] mdd:w-[50px]'>
         <Image src={icon} width={26} height={26} alt={heading} />
       </div>
-      <div className='flex flex-col font-montserrat text-white md:gap-y-1'>
+      <div className='flex flex-col  text-white md:gap-y-1'>
         <h4 className='text-lg font-semibold'>{heading}</h4>
         <p className=''>{description}</p>
       </div>
@@ -158,7 +156,7 @@ const Footer = () => {
               </Fragment>
             ))}
           </div>
-          <div className='bg-section-4 px-8 py-9 font-montserrat text-white mdd:px-4 mdd:py-5'>
+          <div className='bg-section-4 px-8 py-9  text-white mdd:px-4 mdd:py-5'>
             <h3 className='mb-3 text-xl font-semibold'>Đăng ký</h3>
             <p className='mb-3'>Tham gia danh sách gửi thư để nhận tin tức</p>
             <form className='flex items-center'>

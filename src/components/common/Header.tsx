@@ -43,7 +43,7 @@ const Header = () => {
                 <Link
                   href={item.href}
                   key={i}
-                  className='font-montserrat font-medium text-typo-1 transition-all hover:text-primary'
+                  className=' font-medium text-typo-1 transition-all hover:text-primary'
                 >
                   {item.label}
                 </Link>
