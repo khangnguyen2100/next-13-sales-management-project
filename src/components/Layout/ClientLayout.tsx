@@ -11,7 +11,7 @@ const ClientLayout = (props: Props) => {
   return (
     <div className='relative mx-auto flex w-full flex-col'>
       <Header />
-      {props.children}
+      <main className='mt-[92px] mdd:mt-[71px]'>{props.children}</main>
       <Footer />
     </div>
   );

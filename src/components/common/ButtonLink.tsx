@@ -22,8 +22,10 @@ const ButtonLink = (props: Props) => {
     <button
       type={type}
       className={clsx(
-        'px-7 py-4 text-center font-montserrat text-lg font-semibold text-white',
-        color === 'primary' ? 'bg-primary' : 'bg-secondary',
+        'px-7 py-4 text-center  text-lg font-semibold',
+        color === 'primary'
+          ? 'bg-primary text-white'
+          : 'bg-secondary text-typo-1',
         className,
       )}
     >

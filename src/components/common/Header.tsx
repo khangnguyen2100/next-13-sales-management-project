@@ -33,7 +33,9 @@ const Header = () => {
     <div className='fixed left-1/2 z-10 w-full translate-x-[-50%] bg-white shadow-md'>
       <div className='z-10 mx-auto flex w-full max-w-large items-center justify-between py-4 mdd:px-4 mdd:py-2'>
         {/* logo */}
-        <Image src={Logo} alt='beeSmart-logo' height={55} width={186} />
+        <Link href={'/'}>
+          <Image src={Logo} alt='beeSmart-logo' height={55} width={186} />
+        </Link>
         <div className='flex items-center gap-x-10 mdd:hidden'>
           <ul className='flex items-center gap-x-6'>
             {navLins.map((item, i) => {
@@ -41,7 +43,7 @@ const Header = () => {
                 <Link
                   href={item.href}
                   key={i}
-                  className='font-montserrat font-medium text-typo-1 transition-all hover:text-primary'
+                  className=' font-medium text-typo-1 transition-all hover:text-primary'
                 >
                   {item.label}
                 </Link>

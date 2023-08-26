@@ -8,20 +8,16 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      montserrat: ['var(--font-montserrat)'],
+      inter: ['var(--font-inter)'],
+      quicksand: ['var(--font-quicksand)'],
     },
     extend: {
       screens: {
+        xld: { max: '1280px' },
+        lgd: { max: '1020px' },
+        mdd: { max: '768px' },
+        smd: { max: '640px' },
         mobile: { max: '480px' },
-        mdu: { min: '750px' },
-        mdd: { max: '750px' },
-        lgu: { min: '1024px' }, // large up
-        lgd: { max: '1020px' }, // large down
-        stu: { min: '1366px' },
-        std: { max: '1366px' },
-        xlu: { min: '1536px' }, // extra large up
-        xld: { max: '1536px' }, // extra large down
-        slgu: { min: '1700px' }, // super large up
       },
       maxWidth: {
         small: '640px',
@@ -41,6 +37,7 @@ const config: Config = {
           2: '#37393F',
           3: '#4C4D52',
           4: '#474950',
+          5: '#F4F4F4',
         },
       },
     },
@@ -48,4 +45,3 @@ const config: Config = {
   plugins: [],
 };
 export default config;
-

@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Inter, Quicksand } from 'next/font/google';
 
 import './globals.css';
 import { Providers } from './providers';
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-montserrat',
+  variable: '--font-inter',
+});
+
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-quicksand',
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -22,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={montserrat.variable}>
+      <body className={`${quicksand.variable} ${inter.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>
