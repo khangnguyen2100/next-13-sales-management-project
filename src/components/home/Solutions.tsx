@@ -45,7 +45,7 @@ const solutionList: SolutionItem[] = [
 
 const Solutions = () => {
   return (
-    <div className='mx-auto mb-16 w-full max-w-large px-4'>
+    <div className='mx-auto my-24 w-full max-w-large px-4'>
       <HeadingWithDot variant='secondary' color='black' className='mb-4'>
         Chúng tôi là chuyên gia trong
       </HeadingWithDot>

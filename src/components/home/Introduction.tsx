@@ -7,7 +7,7 @@ import VCheck from 'public/icons/v-check.svg';
 
 const Introduction = () => {
   return (
-    <div className='mb-16 flex items-center gap-x-6 gap-y-16 lg:gap-x-[70px] mdd:flex-col'>
+    <div className='mb-24 flex items-center gap-x-6 gap-y-16 lg:gap-x-[70px] mdd:flex-col'>
       {/* image side */}
       <div className='h-full bg-gray-100 md:w-1/2 xl:w-[40%]'>
         <div className='ml-auto mr-6 px-4 py-8 md:max-w-[456px] md:py-24  lg:mr-12'>
