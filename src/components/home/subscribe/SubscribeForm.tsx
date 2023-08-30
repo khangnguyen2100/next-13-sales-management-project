@@ -58,11 +58,7 @@ const SubscribeForm = () => {
   }, []);
   return (
     <div className='w-full md:max-w-[580px]'>
-      <HeadingWithDot
-        variant='secondary'
-        color='white'
-        className='justify-start'
-      >
+      <HeadingWithDot variant='secondary' color='white' align='start'>
         Đăng ký ngay để nhận ưu đãi
       </HeadingWithDot>
       <h2 className='text-[40px] text-white lgd:text-3xl mdd:text-3xl'>

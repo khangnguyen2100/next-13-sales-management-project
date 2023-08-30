@@ -34,7 +34,8 @@ const LeftSide = () => {
       <HeadingWithDot
         color='white'
         variant='secondary'
-        className='mb-4 justify-start'
+        className='mb-4'
+        align='start'
       >
         Quy trình làm việc
       </HeadingWithDot>
@@ -69,7 +70,7 @@ const LeftSide = () => {
 
 const Subscribe = () => {
   return (
-    <div className='my-24 w-full bg-primary'>
+    <div className='mb-24 w-full bg-primary'>
       <div className='mx-auto flex max-w-large items-start gap-x-6 gap-y-16 px-4 py-24 lg:gap-x-12 mdd:flex-col mdd:items-center'>
         <LeftSide />
         <SubscribeForm />
