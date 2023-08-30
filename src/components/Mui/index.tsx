@@ -16,4 +16,5 @@ export {
   Button,
   TextField,
   FormControl,
+  Rating,
 } from '@mui/material';
