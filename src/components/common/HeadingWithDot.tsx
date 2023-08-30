@@ -6,12 +6,23 @@ type Props = {
   color: 'black' | 'white';
   children: ReactNode;
   className?: string;
+  align?: 'start' | 'center' | 'end';
 };
-
+const alignContentLookUp: Record<string, string> = {
+  left: 'justify-start',
+  center: 'justify-center',
+  end: 'justify-end',
+};
 const HeadingWithDot = (props: Props) => {
-  const { variant, color, children, className } = props;
+  const { variant, color, children, className, align = 'center' } = props;
   return (
-    <div className={clsx('flex-center gap-x-2', className)}>
+    <div
+      className={clsx(
+        'flex items-center gap-x-2',
+        alignContentLookUp[align],
+        className,
+      )}
+    >
       <div
         className={clsx(
           'h-3 w-3',

@@ -4,7 +4,9 @@ import {
   Introduction,
   Solutions,
   Subscribe,
+  AdvantageSection,
 } from '@/components/home';
+import ReviewList from 'components/review/ReviewList';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <HomeHeroBanner />
       <Introduction />
       <Solutions />
+      <AdvantageSection />
+      <ReviewList />
       <Subscribe />
     </ClientLayout>
   );
