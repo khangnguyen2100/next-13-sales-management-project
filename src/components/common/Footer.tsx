@@ -10,7 +10,7 @@ import { Divider } from 'components/Mui/index';
 
 import ButtonLink from './ButtonLink';
 
-interface ContactItemProp {
+export interface ContactItemProp {
   heading: string;
   description: string;
   icon: StaticImageData;
