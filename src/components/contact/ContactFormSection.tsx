@@ -39,7 +39,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container mb-28'>
       <HeadingWithDot variant='secondary' color='black' align='center'>
         Contact Us
       </HeadingWithDot>
