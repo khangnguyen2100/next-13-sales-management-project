@@ -1,12 +1,11 @@
-import ClientLayout from '@/components/Layout/ClientLayout';
-import { ServicesOffering, ServicesAdvance } from '@/components/services';
+import Banner from '@/components/common/Banner';
 import { Solutions } from '@/components/home';
 import ReviewList from '@/components/review/ReviewList';
-import Banner from '@/components/common/Banner';
+import { ServicesAdvance, ServicesOffering } from '@/components/services';
 import BannerImg from 'public/images/services/banner.jpg';
 export default function Index() {
   return (
-    <ClientLayout>
+    <>
       <Banner
         imageSrc={BannerImg}
         heading='Dịch vụ của chúng tôi'
@@ -17,6 +16,6 @@ export default function Index() {
       <ServicesOffering />
       <ServicesAdvance />
       <ReviewList />
-    </ClientLayout>
+    </>
   );
 }
