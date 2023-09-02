@@ -26,7 +26,7 @@ const HeroBanner = (props: Props) => {
         priority
         className='object-cover'
         placeholder='blur'
-      ></Image>
+      />
       {/* content */}
       <div className='absolute inset-y-0 left-0 h-full w-full bg-section-2/90 backdrop-blur-[9.5px] lg:w-2/3 xl:w-[46%]'>
         <div className='absolute left-4 top-1/2 translate-y-[-50%] md:left-1/2 md:min-w-[550px] md:translate-x-[-50%]'>

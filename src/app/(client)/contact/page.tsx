@@ -1,22 +1,18 @@
-import ClientLayout from '@/components/Layout/ClientLayout';
-import HeadingWithDot from '@/components/common/HeadingWithDot';
-import HeroBanner from '@/components/common/HeroBanner';
-import BannerImage from 'public/images/contact/banner.jpg';
-import ContactInfoSection from '@/components/contact/ContactInfoSection';
+import Banner from '@/components/common/Banner';
 import ContactFormSection from '@/components/contact/ContactFormSection';
+import ContactInfoSection from '@/components/contact/ContactInfoSection';
+import BannerImage from 'public/images/contact/banner.jpg';
+
 export default function Index() {
   return (
-    <ClientLayout>
-      <HeroBanner imageSrc={BannerImage}>
-        <HeadingWithDot color='white' variant='secondary' align='start'>
-          Contact Us
-        </HeadingWithDot>
-        <h1 className='mt-5 text-[60px] text-white lgd:text-5xl mdd:text-4xl'>
-          Feel Free Reach Us
-        </h1>
-      </HeroBanner>
+    <>
+      <Banner
+        imageSrc={BannerImage}
+        heading='Contact Us'
+        title='Hãy liên hệ với chúng tôi'
+      ></Banner>
       <ContactInfoSection />
       <ContactFormSection />
-    </ClientLayout>
+    </>
   );
 }
