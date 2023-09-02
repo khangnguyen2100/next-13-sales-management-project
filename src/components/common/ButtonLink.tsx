@@ -15,7 +15,7 @@ const ButtonLink = (props: Props) => {
     children,
     color = 'primary',
     className,
-    href = '/',
+    href,
     type = 'button',
   } = props;
   return (
@@ -29,11 +29,7 @@ const ButtonLink = (props: Props) => {
         className,
       )}
     >
-      {type === 'button' ? (
-        <Link href={href}>{children}</Link>
-      ) : (
-        <>{children}</>
-      )}
+      {href ? <Link href={href}>{children}</Link> : <>{children}</>}
     </button>
   );
 };
