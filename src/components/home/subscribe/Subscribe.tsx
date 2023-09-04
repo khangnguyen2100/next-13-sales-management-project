@@ -58,7 +58,7 @@ const LeftSide = () => {
               <div className='block flex-1 text-white'>
                 <h3 className='text-[22px]'>{title}</h3>
                 <p>{description}</p>
-                <Divider className='mt-5 bg-white' />
+                <Divider className='!mt-5 bg-white' />
               </div>
             </div>
           );

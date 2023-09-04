@@ -25,14 +25,14 @@ const PricingOptionSection = () => {
         {/* basic */}
         <div className='col-span-1 w-full bg-section-5 px-7 py-11 text-center text-typo-1 shadow-md lgd:px-4 mdd:py-8'>
           <h3 className='text-[32px] text-typo-1'>Basic</h3>
-          <Divider className='my-6' />
+          <Divider className='!my-6' />
           <h3 className='text-[40px]'>
             $7.99<span className='text-2xl'>/ month</span>
           </h3>
           <div className='mt-6 bg-secondary px-8 py-2 text-[#208068] lg:mx-9'>
             Billed as $96 per year
           </div>
-          <Divider className='my-6' />
+          <Divider className='!my-6' />
           <div className='text-center leading-[2.5] text-typo-3'>
             <p>Unlimited members</p>
             <p>
@@ -57,14 +57,14 @@ const PricingOptionSection = () => {
           </div>
           <div className='relative z-[2] w-full bg-primary px-7 py-11 text-center text-white shadow-md lgd:px-4 mdd:py-8'>
             <h3 className='text-[32px] text-white'>Advanced</h3>
-            <Divider className='my-6 bg-white' />
+            <Divider className='!my-6 bg-white' />
             <h3 className='text-[40px]'>
               $8.99<span className='text-2xl'>/ month</span>
             </h3>
             <div className='mt-6 bg-white px-8 py-2 text-primary lg:mx-9'>
               Billed as $119 per year
             </div>
-            <Divider className='my-6 bg-white' />
+            <Divider className='!my-6 bg-white' />
             <div className='text-center leading-[2.5] text-white'>
               <p>Unlimited members</p>
               <p>
@@ -92,14 +92,14 @@ const PricingOptionSection = () => {
         {/* pro */}
         <div className='col-span-1 w-full bg-section-5 px-7 py-11 text-center text-typo-1 shadow-md lgd:px-4 mdd:py-8'>
           <h3 className='text-[32px] text-typo-1'>Pro</h3>
-          <Divider className='my-6' />
+          <Divider className='!my-6' />
           <h3 className='text-[40px]'>
             $9.99<span className='text-2xl'>/ month</span>
           </h3>
           <div className='mt-6 bg-secondary px-8 py-2 text-[#208068] lg:mx-9'>
             Billed as $199 per year
           </div>
-          <Divider className='my-6' />
+          <Divider className='!my-6' />
           <div className='text-center leading-[2.5] text-typo-3'>
             <p>Unlimited members</p>
             <p>
