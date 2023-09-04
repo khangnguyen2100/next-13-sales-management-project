@@ -18,4 +18,7 @@ export {
   FormControl,
   Rating,
   Select,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
 } from '@mui/material';
