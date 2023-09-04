@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import React, { ReactNode } from 'react';
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
   imageSrc: StaticImageData;
   height?: 'small' | 'medium' | 'large';
 };
