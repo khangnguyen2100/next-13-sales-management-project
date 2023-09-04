@@ -38,7 +38,7 @@ const WorkProcessCardList: WorkProcessCard[] = [
 ];
 function WorkProcess() {
   return (
-    <div className='mx-auto mb-24 flex max-w-large flex-col items-center justify-center mdd:gap-y-4'>
+    <div className='mx-auto mb-24 flex max-w-large flex-col items-center justify-center gap-y-4'>
       <HeadingWithDot variant='secondary' color='black' className='mb-4'>
         Quá trình làm việc
       </HeadingWithDot>
@@ -59,7 +59,7 @@ function WorkProcess() {
               </div>
               {/* Title */}
               <h3 className='text-2xl font-semibold'>{title}</h3>
-              <p className='text-lg'>{content}</p>
+              <p className='flex-1 text-lg'>{content}</p>
               {/* Button */}
               <ButtonLink color='secondary' href={href}>
                 Xem thêm
