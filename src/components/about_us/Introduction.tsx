@@ -11,7 +11,13 @@ const Introduction = () => {
       {/* image side */}
       <div className='h-full bg-gray-100 md:w-1/2 xl:w-[40%]'>
         <div className='ml-auto mr-6 px-4 py-8 md:max-w-[456px] md:py-24  lg:mr-12'>
-          <Image src={IntroductionImg} height={446} width={424} alt='intro' />
+          <Image
+            src={IntroductionImg}
+            height={446}
+            width={424}
+            alt='intro'
+            className='mx-auto'
+          />
           <h3 className='mb-3 mt-5 text-3xl'>
             Chúng tôi sẵn sàng phát triển doanh nghiệp cùng bạn
           </h3>
