@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import ButtonLink from '@/components/common/ButtonLink';
 import HeadingWithDot from '@/components/common/HeadingWithDot';
@@ -10,18 +10,16 @@ type FormValueProps = {
   fullName: string;
   email: string;
   phoneNumber: string;
-  bookingDate: string;
-  bookingTime: string;
-  note: string;
+  subject: string;
+  message: string;
 };
-const SubscribeForm = () => {
-  const initForm = {
+const ContactFormSection = () => {
+  const initForm: FormValueProps = {
     fullName: '',
     email: '',
     phoneNumber: '',
-    bookingDate: '',
-    bookingTime: '12:00',
-    note: '',
+    subject: '',
+    message: '',
   };
   const [formValue, setFormValue] = useState<FormValueProps>(initForm);
 
@@ -37,45 +35,28 @@ const SubscribeForm = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      date: data.get('booking-date'),
-      time: data.get('time'),
-    });
+    console.log('data:', data);
   };
 
-  useEffect(() => {
-    // set default value for date
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = (date.getDate() + 1).toString().padStart(2, '0');
-    const today = `${year}-${month}-${day}`;
-
-    setFormValue(prev => ({
-      ...prev,
-      bookingDate: today,
-    }));
-  }, []);
   return (
-    <div className='w-full md:max-w-[580px]'>
-      <HeadingWithDot variant='secondary' color='white' align='start'>
-        Đăng ký ngay để nhận ưu đãi
+    <div className='container mb-28'>
+      <HeadingWithDot variant='secondary' color='black' align='center'>
+        Contact Us
       </HeadingWithDot>
-      <h2 className='text-[40px] text-white lgd:text-3xl mdd:text-3xl'>
-        <span className='block'>10 ngày dùng thử</span>
-        <span className='block'>MIỄN PHÍ</span>
+      <h2 className='text-center text-[40px] text-typo-1 lgd:text-3xl mdd:text-3xl'>
+        Request A Call Back !
       </h2>
       <Box
         component='form'
         onSubmit={handleSubmit}
-        className='mt-6 grid grid-cols-2 gap-x-6 gap-y-[30px] bg-white p-14 mdd:px-7'
+        className='mt-10 grid grid-cols-2 gap-x-8 gap-y-6 bg-white px-12 lgd:px-6 mdd:px-0'
       >
         <TextField
           id='fullName'
           name='fullName'
           label='Tên'
           variant='outlined'
-          className='col-span-2 w-full bg-[#F8F8F8]'
+          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
           required
           value={formValue.fullName}
           onChange={handleChangeForm}
@@ -86,7 +67,7 @@ const SubscribeForm = () => {
           label='Địa chỉ Email'
           variant='outlined'
           type='email'
-          className='col-span-2 w-full bg-[#F8F8F8]'
+          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
           required
           value={formValue.email}
           onChange={handleChangeForm}
@@ -97,52 +78,43 @@ const SubscribeForm = () => {
           label='Số điện thoại'
           variant='outlined'
           type='tel'
-          className='col-span-2 w-full bg-[#F8F8F8]'
+          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
           required
           value={formValue.phoneNumber}
           onChange={handleChangeForm}
         />
-
         <TextField
-          id='bookingDate'
-          name='bookingDate'
-          label='Ngày hẹn'
-          variant='outlined'
-          type='date'
-          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
-          required
-          value={formValue.bookingDate}
-          onChange={handleChangeForm}
-        />
-        <TextField
-          id='bookingTime'
-          name='bookingTime'
-          type='time'
-          label='Thời gian'
+          id='subject'
+          name='subject'
+          label='Tên'
           variant='outlined'
           className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
           required
-          value={formValue.bookingTime}
+          value={formValue.subject}
           onChange={handleChangeForm}
         />
         <TextField
-          id='note'
-          name='note'
+          id='message'
+          name='message'
           label='Mô tả về dịch vụ bạn cần tư vấn.'
           variant='outlined'
           type='text'
           rows={4}
           multiline
           className='col-span-2 w-full bg-[#F8F8F8]'
-          value={formValue.note}
+          value={formValue.message}
           onChange={handleChangeForm}
         />
-        <ButtonLink type='submit' color='secondary' className='w-fit px-[60px]'>
-          Gửi
+        <ButtonLink
+          type='submit'
+          color='primary'
+          className='col-span-2 mx-auto w-fit px-[60px]'
+        >
+          Submit
         </ButtonLink>
       </Box>
     </div>
   );
 };
 
-export default SubscribeForm;
+export default ContactFormSection;

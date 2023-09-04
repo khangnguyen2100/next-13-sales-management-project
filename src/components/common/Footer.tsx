@@ -10,7 +10,7 @@ import { Divider } from 'components/Mui/index';
 
 import ButtonLink from './ButtonLink';
 
-interface ContactItemProp {
+export interface ContactItemProp {
   heading: string;
   description: string;
   icon: StaticImageData;
@@ -129,7 +129,7 @@ const ContactItem = ({ props }: { props: ContactItemProp }) => {
 
 const Footer = () => {
   return (
-    <div className='mt-[140px] w-full bg-section-1'>
+    <div className='w-full bg-section-1'>
       <div className='mx-auto my-24 max-w-large mdd:my-10 mdd:px-4'>
         {/* header */}
         <div className='flex justify-between md:items-center mdd:flex-col mdd:gap-6'>

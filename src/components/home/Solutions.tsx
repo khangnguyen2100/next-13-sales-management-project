@@ -7,6 +7,7 @@ import Icon2 from 'public/icons/home-solution-icon-2.svg';
 import Icon3 from 'public/icons/home-solution-icon-3.svg';
 import Icon4 from 'public/icons/home-solution-icon-4.svg';
 import Icon5 from 'public/icons/home-solution-icon-5.svg';
+import Icon6 from 'public/icons/home-solution-icon-6.svg';
 
 import HeadingWithDot from '../common/HeadingWithDot';
 
@@ -41,9 +42,14 @@ const solutionList: SolutionItem[] = [
     href: '/',
     icon: Icon5,
   },
+  {
+    title: 'Banking Management',
+    href: '/',
+    icon: Icon6,
+  },
 ];
 
-const Solutions = () => {
+const Solutions = ({ full = false }: { full?: Boolean }) => {
   return (
     <div className='mx-auto my-24 w-full max-w-large px-4'>
       <HeadingWithDot variant='secondary' color='black' className='mb-4'>
@@ -57,6 +63,7 @@ const Solutions = () => {
       <div className='grid grid-cols-3 gap-x-8 gap-y-7 lgd:grid-cols-2 smd:grid-cols-1 '>
         {solutionList.map((item, i) => {
           const { icon, title, href } = item;
+          if (i > 4 && !full) return;
           return (
             <div
               key={i}
@@ -85,11 +92,13 @@ const Solutions = () => {
             </div>
           );
         })}
-        <div className='flex-center transition-md  col-span-1 min-h-[173px] bg-primary hover:shadow-md'>
-          <Link href={'/services'}>
-            <h3 className='text-2xl text-white'>More Services</h3>
-          </Link>
-        </div>
+        {!full && (
+          <div className='flex-center transition-md  col-span-1 min-h-[173px] bg-primary hover:shadow-md'>
+            <Link href={'/services'}>
+              <h3 className='text-2xl text-white'>More Services</h3>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
