@@ -156,7 +156,7 @@ const Footer = () => {
               </Fragment>
             ))}
           </div>
-          <div className='bg-section-4 px-8 py-9  text-white mdd:px-4 mdd:py-5'>
+          <div className='w-full bg-section-4 px-8  py-9 text-white mdd:px-4 mdd:py-5'>
             <h3 className='mb-3 text-xl font-semibold'>Đăng ký</h3>
             <p className='mb-3'>Tham gia danh sách gửi thư để nhận tin tức</p>
             <form className='flex items-center'>
@@ -164,7 +164,7 @@ const Footer = () => {
                 type='email'
                 required
                 placeholder='Địa chỉ email của bạn'
-                className='flex-1 bg-white px-5 py-4 font-medium text-typo-1 placeholder-shown:text-typo-3 focus:outline-none'
+                className='w-full flex-1 bg-white px-5 py-4 font-medium text-typo-1 placeholder-shown:text-typo-3 focus:outline-none'
               />
               <ButtonLink
                 color='primary'
