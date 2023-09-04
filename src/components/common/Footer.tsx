@@ -144,7 +144,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <Divider className='my-12 bg-[#6C6D72]' />
+        <Divider className='!my-12 bg-[#6C6D72]' />
 
         <div className='flex items-start justify-between gap-y-10 mdd:flex-col'>
           {/* links */}

@@ -139,7 +139,7 @@ const ServicesAdvance = () => {
           />
         </div>
       </div>
-      <Divider className='mt-24' />
+      <Divider className='!mt-24' />
     </div>
   );
 };
