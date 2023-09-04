@@ -2,6 +2,7 @@ import ClientLayout from '@/components/Layout/ClientLayout';
 import {
   AboutUsBanner,
   Introduction,
+  OurTeam,
   WorkProcess,
 } from '@/components/about_us';
 
@@ -11,6 +12,7 @@ function AboutUs() {
       <AboutUsBanner></AboutUsBanner>
       <Introduction></Introduction>
       <WorkProcess></WorkProcess>
+      <OurTeam></OurTeam>
     </>
   );
 }

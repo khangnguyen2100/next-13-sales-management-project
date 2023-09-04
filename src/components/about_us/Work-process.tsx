@@ -38,19 +38,19 @@ const WorkProcessCardList: WorkProcessCard[] = [
 ];
 function WorkProcess() {
   return (
-    <div className='mx-auto mb-24 flex max-w-large flex-col items-center justify-center gap-y-4'>
+    <div className='mx-auto mb-24 flex max-w-large flex-col items-center justify-center gap-y-4 '>
       <HeadingWithDot variant='secondary' color='black' className='mb-4'>
         Quá trình làm việc
       </HeadingWithDot>
-      <h2 className='mx-auto mb-10 max-w-[815px] text-center text-[40px] capitalize mdd:text-3xl mobile:text-2xl'>
+      <h2 className='mx-auto mb-10 max-w-[815px] text-center text-[36px] capitalize mdd:px-4 mdd:text-3xl mobile:text-2xl'>
         Cách làm việc của chúng tôi
       </h2>
-      <div className='grid grid-cols-12 gap-x-7 mdd:gap-y-14'>
+      <div className='grid max-w-full grid-cols-12 gap-x-7 mdd:gap-y-14 '>
         {WorkProcessCardList.map((item, index) => {
           const { title, content, href, icon } = item;
           return (
             <div
-              className='relative col-span-4 flex flex-col gap-y-5 bg-gray-100 px-10 py-14 text-center mdd:col-span-12 mdd:px-20'
+              className='relative col-span-4 flex flex-col gap-y-5 bg-gray-100 px-10 py-14 text-center mdd:col-span-12 mdd:px-8 mdd:py-12 mobile:px-4 mobile:py-8'
               key={index}
             >
               {/*Icons*/}
