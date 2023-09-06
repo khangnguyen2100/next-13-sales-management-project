@@ -55,7 +55,7 @@ function WorkProcess() {
             >
               {/*Icons*/}
               <div className='flex-center absolute left-[50%] top-[-10%] h-[72px] w-[72px] translate-x-[-50%] translate-y-[-10%]'>
-                <Image src={icon} alt={title} fill className='object-cover' />
+                <Image src={icon} alt={title} className='object-cover' />
               </div>
               {/* Title */}
               <h3 className='text-2xl font-semibold'>{title}</h3>
