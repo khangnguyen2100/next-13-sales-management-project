@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
-  color: 'primary' | 'secondary';
+  color: 'primary' | 'secondary' | 'transparent';
   className?: string;
   href?: string;
   type?: 'submit' | 'button';
@@ -25,7 +25,9 @@ const ButtonLink = (props: Props) => {
         'px-7 py-4 text-center  text-lg font-semibold',
         color === 'primary'
           ? 'bg-primary text-white'
-          : 'bg-secondary text-typo-1',
+          : color === 'secondary'
+          ? 'bg-secondary text-typo-1'
+          : 'bg-transparent text-typo-1',
         className,
       )}
     >
