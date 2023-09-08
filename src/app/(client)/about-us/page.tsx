@@ -1,4 +1,3 @@
-import ClientLayout from '@/components/Layout/ClientLayout';
 import {
   AboutUsBanner,
   Introduction,

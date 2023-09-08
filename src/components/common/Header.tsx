@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import Logo from 'public/logo.png';
 
-import ButtonLink from './ButtonLink';
+import LoginModal from '../login/LoginModal';
 
 interface NavLink {
   label: string;
@@ -20,12 +20,20 @@ const navLins: NavLink[] = [
     href: '/about-us',
   },
   {
+    label: 'Dịch vụ',
+    href: '/services',
+  },
+  {
     label: 'Bài viết',
     href: '/blog',
   },
   {
-    label: 'Đăng nhập',
-    href: '/login',
+    label: 'Liên hệ',
+    href: '/contact',
+  },
+  {
+    label: 'Đăng ký',
+    href: '/sign-up',
   },
 ];
 const Header = () => {
@@ -50,7 +58,8 @@ const Header = () => {
               );
             })}
           </ul>
-          <ButtonLink color='primary'>Tư vấn miễn phí</ButtonLink>
+          {/* login button */}
+          <LoginModal />
         </div>
         {/* nav */}
       </div>

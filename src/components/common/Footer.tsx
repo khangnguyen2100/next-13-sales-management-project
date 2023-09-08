@@ -32,20 +32,16 @@ const footerLinks: FooterColumnLink[] = [
         href: '/about-us',
       },
       {
-        label: 'Khách hàng',
-        href: '/',
+        label: 'Dịch vụ',
+        href: '/services',
       },
       {
-        label: 'Điều khoản sử dụng',
-        href: '/',
+        label: 'Phí dịch vụ',
+        href: '/pricing',
       },
       {
-        label: 'Chính sách',
-        href: '/',
-      },
-      {
-        label: 'Liên hệ',
-        href: '/',
+        label: 'Bài viết',
+        href: '/blog',
       },
     ],
   },
@@ -57,12 +53,12 @@ const footerLinks: FooterColumnLink[] = [
         href: '/blog',
       },
       {
-        label: 'Hướng dẫn sử dụng',
-        href: '/',
+        label: 'Câu hỏi thường gặp',
+        href: '/faq',
       },
       {
-        label: 'Video hướng dẫn sử dụng',
-        href: '/',
+        label: 'Liên hệ',
+        href: '/contact',
       },
     ],
   },

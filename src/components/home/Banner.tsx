@@ -26,7 +26,7 @@ const HomeHeroBanner = () => {
         <span className='block'>phổ biến nhất</span>
       </h1>
       <div className='mt-9 flex items-center gap-x-8'>
-        <ButtonLink color='secondary' type='button' href='/login'>
+        <ButtonLink color='secondary' type='button' href='/sign-up'>
           Dùng Thử Miễn Phí
         </ButtonLink>
         <Link
