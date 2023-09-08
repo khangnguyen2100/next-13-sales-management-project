@@ -8,6 +8,7 @@ type Props = {
   className?: string;
   href?: string;
   type?: 'submit' | 'button';
+  onClick?: () => void;
 };
 
 const ButtonLink = (props: Props) => {
@@ -17,6 +18,7 @@ const ButtonLink = (props: Props) => {
     className,
     href,
     type = 'button',
+    onClick,
   } = props;
   return (
     <button
@@ -30,6 +32,7 @@ const ButtonLink = (props: Props) => {
           : 'bg-transparent text-typo-1',
         className,
       )}
+      onClick={onClick}
     >
       {href ? <Link href={href}>{children}</Link> : <>{children}</>}
     </button>
