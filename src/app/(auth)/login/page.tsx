@@ -4,7 +4,6 @@ import Button from '@mui/joy/Button';
 import { formLabelClasses } from '@mui/joy/FormLabel';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import Typography from '@mui/joy/Typography';
-import { CssVarsProvider } from '@mui/joy/styles';
 
 import LoginForm from '@/components/login/LoginForm';
 import GoogleIcon from '@/components/login/GoogleIcon';
@@ -12,7 +11,7 @@ import Logo from '@/components/common/Logo/Logo';
 
 export default function JoySignInSideTemplate() {
   return (
-    <CssVarsProvider defaultMode='light' disableTransitionOnChange>
+    <>
       <GlobalStyles
         styles={{
           ':root': {
@@ -127,6 +126,6 @@ export default function JoySignInSideTemplate() {
           },
         })}
       />
-    </CssVarsProvider>
+    </>
   );
 }

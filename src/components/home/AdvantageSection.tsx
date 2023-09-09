@@ -46,7 +46,7 @@ const CircularItem = (props: CircularItemProps) => {
 };
 const AdvantageSection = () => {
   return (
-    <div className='flex w-full items-center gap-y-10 bg-section-2 lg:justify-end lgd:flex-col'>
+    <div className='flex w-full items-center gap-y-10 overflow-hidden bg-section-2 lg:justify-end lgd:flex-col'>
       {/* content */}
       <div className='text-white lg:py-10 lg:pl-4 lg:pr-12 xl:pr-[92px] lgd:px-4 lgd:pt-10'>
         {/* header */}

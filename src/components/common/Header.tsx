@@ -54,7 +54,7 @@ const Header = () => {
             })}
           </ul>
           {/* login button */}
-          <ButtonLink href='login' color='primary'>
+          <ButtonLink href='/login' color='primary'>
             Đăng nhập
           </ButtonLink>
         </div>

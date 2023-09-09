@@ -8,6 +8,8 @@ import MailIcon from 'public/icons/mail.svg';
 import LocationIcon from 'public/icons/location.svg';
 import { Divider } from '@/components/lib/mui';
 
+import { Input } from '../lib/joy';
+
 import ButtonLink from './ButtonLink';
 
 export interface ContactItemProp {
@@ -156,16 +158,21 @@ const Footer = () => {
             <h3 className='mb-3 text-xl font-semibold'>Đăng ký</h3>
             <p className='mb-3'>Tham gia danh sách gửi thư để nhận tin tức</p>
             <form className='flex items-center'>
-              <input
+              <Input
                 type='email'
                 required
                 placeholder='Địa chỉ email của bạn'
-                className='w-full flex-1 bg-white px-5 py-4 font-medium text-typo-1 placeholder-shown:text-typo-3 focus:outline-none'
+                className='w-full flex-1 rounded-none border-none bg-white px-5 py-4 font-medium text-typo-1 outline-none placeholder-shown:text-typo-3 focus:outline-none'
+                sx={{
+                  '&::before': {
+                    display: 'none',
+                  },
+                }}
               />
               <ButtonLink
                 color='primary'
                 type='submit'
-                className='h-[56px] w-[116px] !p-[0] mdd:text-sm'
+                className='h-[56px] w-[116px] rounded-l-none !p-[0] mdd:text-sm'
               >
                 Đăng ký
               </ButtonLink>

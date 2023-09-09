@@ -1,3 +1,3 @@
 'use client';
 
-export { Button } from '@mui/joy';
+export { Button, Input } from '@mui/joy';
