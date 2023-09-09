@@ -1,10 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
-import Logo from 'public/logo.png';
-
-import LoginModal from '../login/LoginModal';
+import ButtonLink from './ButtonLink';
+import Logo from './Logo/Logo';
 
 interface NavLink {
   label: string;
@@ -41,9 +38,7 @@ const Header = () => {
     <div className='fixed left-1/2 z-10 w-full translate-x-[-50%] bg-white shadow-md'>
       <div className='z-10 mx-auto flex w-full max-w-large items-center justify-between py-4 mdd:px-4 mdd:py-2'>
         {/* logo */}
-        <Link href={'/'}>
-          <Image src={Logo} alt='beeSmart-logo' height={55} width={186} />
-        </Link>
+        <Logo />
         <div className='flex items-center gap-x-10 mdd:hidden'>
           <ul className='flex items-center gap-x-6'>
             {navLins.map((item, i) => {
@@ -59,7 +54,9 @@ const Header = () => {
             })}
           </ul>
           {/* login button */}
-          <LoginModal />
+          <ButtonLink href='login' color='primary'>
+            Đăng nhập
+          </ButtonLink>
         </div>
         {/* nav */}
       </div>
