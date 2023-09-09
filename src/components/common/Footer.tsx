@@ -6,7 +6,7 @@ import Logo from 'public/logo.png';
 import PhoneIcon from 'public/icons/phone.svg';
 import MailIcon from 'public/icons/mail.svg';
 import LocationIcon from 'public/icons/location.svg';
-import { Divider } from 'components/Mui/index';
+import { Divider } from '@/components/lib/mui';
 
 import ButtonLink from './ButtonLink';
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Divider } from 'components/Mui/index';
+import { Divider } from '@/components/lib/mui';
 import VCheckSecondary from 'public/icons/v-check-secondary.svg';
 
 import HeadingWithDot from '../../common/HeadingWithDot';

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image1 from 'public/images/home/home-1.jpg';
 import vCheckIcon from 'public/icons/v-check-secondary.svg';
 import starIcon from 'public/icons/star.svg';
-import { CircularProgress } from 'components/Mui';
+import { CircularProgress } from '@/components/lib/mui';
 
 import HeadingWithDot from '../common/HeadingWithDot';
 

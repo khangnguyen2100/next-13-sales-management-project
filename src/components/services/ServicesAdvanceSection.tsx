@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { CircularProgress, Divider } from 'components/Mui';
+import { CircularProgress, Divider } from '@/components/lib/mui';
 import starIcon from 'public/icons/star.svg';
 import vCheckIcon from 'public/icons/v-check-secondary.svg';
 

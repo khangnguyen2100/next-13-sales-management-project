@@ -1,4 +1,4 @@
-import { CircularProgress } from '@/components/Mui';
+import { CircularProgress } from '@/components/lib/mui';
 
 export default function Loading() {
   return (

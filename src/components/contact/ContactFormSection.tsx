@@ -4,7 +4,7 @@ import React, { ChangeEvent, useState } from 'react';
 
 import ButtonLink from '@/components/common/ButtonLink';
 import HeadingWithDot from '@/components/common/HeadingWithDot';
-import { Box, TextField } from 'components/Mui/index';
+import { Box, TextField } from '@/components/lib/mui';
 
 type FormValueProps = {
   fullName: string;
