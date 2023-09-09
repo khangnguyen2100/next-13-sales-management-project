@@ -24,7 +24,7 @@ const ButtonLink = (props: Props) => {
     <button
       type={type}
       className={clsx(
-        'px-7 py-4 text-center  text-lg font-semibold',
+        'border-none px-7 py-4  text-center text-lg font-semibold',
         color === 'primary'
           ? 'bg-primary text-white'
           : color === 'secondary'
@@ -34,7 +34,13 @@ const ButtonLink = (props: Props) => {
       )}
       onClick={onClick}
     >
-      {href ? <Link href={href}>{children}</Link> : <>{children}</>}
+      {href ? (
+        <Link href={href} className='text-inherit'>
+          {children}
+        </Link>
+      ) : (
+        <>{children}</>
+      )}
     </button>
   );
 };

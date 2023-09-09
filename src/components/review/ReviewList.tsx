@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 
 import reviewer1 from 'public/images/review/avatar-1.jpg';
 import reviewer2 from 'public/images/review/avatar-2.jpg';
-import { Rating } from 'components/Mui';
+import { Rating } from '@/components/lib/mui';
 
 import HeadingWithDot from '../common/HeadingWithDot';
 type ReviewItemProps = {

@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 import ButtonLink from '@/components/common/ButtonLink';
-import { Box, MenuItem, Select, TextField } from 'components/Mui/index';
+import { Box, MenuItem, Select, TextField } from '@/components/lib/mui';
 import district_json from 'mocks/quan_huyen.json';
 import province_json from 'mocks/tinh_tp.json';
 

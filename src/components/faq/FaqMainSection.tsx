@@ -3,7 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { MdExpandMore } from 'react-icons/md';
 import clsx from 'clsx';
 
-import { Accordion, AccordionDetails, AccordionSummary } from 'components/Mui';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+} from '@/components/lib/mui';
 type Category = {
   id: string;
   label: string;

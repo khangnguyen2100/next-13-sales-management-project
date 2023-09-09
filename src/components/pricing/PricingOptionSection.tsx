@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Divider } from 'components/Mui';
+import { Divider } from '@/components/lib/mui';
 
 import HeadingWithDot from '../common/HeadingWithDot';
 import ButtonLink from '../common/ButtonLink';

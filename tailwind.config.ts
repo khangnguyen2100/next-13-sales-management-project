@@ -42,6 +42,10 @@ const config: Config = {
       },
     },
   },
+  // important: '#__next',
+  corePlugins: {
+    preflight: false,
+  },
   plugins: [],
 };
 export default config;
