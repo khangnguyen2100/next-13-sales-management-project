@@ -1,9 +1,7 @@
 import AdminLayout from '@/components/Layout/AdminLayout';
 
 function AdminDashBoard() {
-  return <AdminLayout>
-    
-  </AdminLayout>;
+  return <AdminLayout>page</AdminLayout>;
 }
 
 export default AdminDashBoard;
