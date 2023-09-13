@@ -1,7 +1,5 @@
-import AdminLayout from '@/components/Layout/AdminLayout';
-
 function AdminDashBoard() {
-  return <AdminLayout>page</AdminLayout>;
+  return <div>Dashboard</div>;
 }
 
 export default AdminDashBoard;

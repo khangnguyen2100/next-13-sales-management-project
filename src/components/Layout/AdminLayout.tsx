@@ -8,10 +8,10 @@ type Props = {
 };
 function AdminLayout({ children }: Props) {
   return (
-    <div className='relative mx-auto flex w-full flex-col'>
+    <div className='admin-container relative mx-auto flex w-full flex-col'>
       <AdminHeader />
-      <AdminSideBar />
-      <main className='mt-[92px] mdd:mt-[71px]'>{children}</main>
+      {/* <AdminSideBar /> */}
+      <main className='my-[50px] w-full'>{children}</main>
     </div>
   );
 }

@@ -20,5 +20,6 @@ export {
   Select,
   Accordion,
   AccordionSummary,
-  AccordionDetails
+  AccordionDetails,
+  Backdrop,
 } from '@mui/material';
