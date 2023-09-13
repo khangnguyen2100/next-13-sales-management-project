@@ -1,0 +1,7 @@
+.MuiDataGrid-columnHeader {
+  background-color: #dcf4fc;
+}
+.MuiDataGrid-columnHeaderTitle {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
