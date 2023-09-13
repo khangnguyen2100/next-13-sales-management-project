@@ -23,7 +23,7 @@ const config: Config = {
         small: '640px',
         medium: '943px',
         large: '1220px',
-        xl:'1570px'
+        xl: '1570px',
       },
       colors: {
         primary: '#6B77E5',
