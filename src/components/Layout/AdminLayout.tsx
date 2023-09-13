@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import AdminHeader from '../common/admin/AdminHeader';
+import AdminHeader from '../common/Admin/AdminHeader';
 
 type Props = {
   children: ReactNode;
