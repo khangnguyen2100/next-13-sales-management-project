@@ -23,6 +23,7 @@ const config: Config = {
         small: '640px',
         medium: '943px',
         large: '1220px',
+        xl:'1570px'
       },
       colors: {
         primary: '#6B77E5',
@@ -31,6 +32,7 @@ const config: Config = {
           1: '#37393F',
           2: '#B9B9B9',
           3: '#7D7D7D',
+          4: '#0090da',
         },
         section: {
           1: '#2E2F34',

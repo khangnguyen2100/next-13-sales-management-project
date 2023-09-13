@@ -51,7 +51,7 @@ const TopHeaderLinks: TopHeaderLinksType[] = [
 function AdminHeader() {
   return (
     <>
-      <div className='flex items-center justify-between px-4 py-5 xld:px-0'>
+      <div className='mx-auto flex w-full max-w-xl items-center justify-between px-4 py-5 xld:px-0'>
         <div>
           <Image src={Logo} alt='Beesmart' className='h-8 w-auto'></Image>
         </div>
@@ -69,18 +69,20 @@ function AdminHeader() {
           })}
         </div>
       </div>
-      <div className='flex bg-[#0090DA] xld:px-0'>
-        {NavbarLinks.map((item, index) => {
-          return (
-            <Link
-              href={item.linkTo}
-              key={index}
-              className='px-5 py-3 text-white hover:bg-[#0078b6]'
-            >
-              {item.title}
-            </Link>
-          );
-        })}
+      <div className='bg-[#0090DA] xld:px-0'>
+        <div className='mx-auto flex max-w-xl'>
+          {NavbarLinks.map((item, index) => {
+            return (
+              <Link
+                href={item.linkTo}
+                key={index}
+                className='px-5 py-3 text-white hover:bg-[#0078b6]'
+              >
+                {item.title}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </>
   );
