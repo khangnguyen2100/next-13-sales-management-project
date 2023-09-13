@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
-import AdminHeader from '../admin/AdminHeader';
-import AdminSideBar from '../admin/AdminSideBar';
+import AdminHeader from '../common/admin/AdminHeader';
 
 type Props = {
   children: ReactNode;
@@ -10,8 +9,7 @@ function AdminLayout({ children }: Props) {
   return (
     <div className='relative mx-auto flex w-full flex-col'>
       <AdminHeader />
-      <AdminSideBar />
-      <main className='mt-[92px] mdd:mt-[71px]'>{children}</main>
+      <main className='mt-[20px]'>{children}</main>
     </div>
   );
 }
