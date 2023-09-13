@@ -23,6 +23,7 @@ const data = {
   labels: ['Thứ 2', 'Thứ 3', 'Thứ 4'],
   datasets: [
     {
+      backgroundColor: '#0090da',
       label: 'Số lượng bán ra',
       data: [12, 19, 3],
       borderColor: 'rgba(255, 99, 132, 1)',
@@ -32,12 +33,12 @@ const data = {
 };
 const BarChart = () => {
   return (
-      <Bar
-        data={data}
-        options={{
-          responsive: true,
-        }}
-      />
+    <Bar
+      data={data}
+      options={{
+        responsive: true,
+      }}
+    />
   );
 };
 export default BarChart;

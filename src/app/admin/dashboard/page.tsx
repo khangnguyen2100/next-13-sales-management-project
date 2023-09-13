@@ -19,7 +19,7 @@ function AdminDashBoard() {
               <SlArrowDown />
             </div>
           </div>
-          <div className='flex gap-x-3'>
+          <div className='flex gap-x-3 text-sm'>
             <span>Theo ngày</span>
             <span>Theo giờ</span>
             <span>Theo thứ</span>
