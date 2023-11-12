@@ -5,11 +5,16 @@ import type { SelectChangeEvent } from '@mui/material';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
+import { enqueueSnackbar } from 'notistack';
 
 import ButtonLink from '@/components/common/ButtonLink';
 import { Box, MenuItem, Select, TextField } from '@/components/lib/mui';
 import district_json from 'mocks/quan_huyen.json';
 import province_json from 'mocks/tinh_tp.json';
+import { SignUpType } from '@/constants/types/auth';
+import { shopTypes } from '@/mocks/shopType';
+import authAPI from '@/api/auth';
+import { useRouter } from 'next/router';
 
 type FormValue = {
   fullName: string;
@@ -20,6 +25,8 @@ type FormValue = {
   shopName: string;
   password: string;
   repeatPassword: string;
+  addressDetail: string;
+  shopType: string;
 };
 
 const districtJson = Object.values(district_json);
@@ -58,6 +65,8 @@ const formSchema = yup
       .required('Vui lòng nhập lại mật khẩu')
       .min(6, 'Mật khẩu phải có ít nhất 6 ký tự')
       .max(100, 'Mật khẩu không được vượt quá 100 ký tự'),
+    addressDetail: yup.string().required('Vui lòng nhập địa chỉ chi tiết'),
+    shopType: yup.string().required('Vui lòng chọn loại cửa hàng'),
   })
   .required();
 
@@ -71,6 +80,8 @@ const SignUpForm = () => {
     shopName: '',
     password: '',
     repeatPassword: '',
+    addressDetail: '',
+    shopType: '9',
   };
 
   const {
@@ -85,11 +96,39 @@ const SignUpForm = () => {
   });
   const [districtData, setDistrictData] = useState(districtJson);
   const formValues = watch();
-  console.log('formValues:', formValues);
+  const router = useRouter();
 
-  // console.log('errors:', errors);
-  const onSubmit = (data: FormValue) => {
-    console.log('data:', data);
+  const onSubmit = async (data: FormValue) => {
+    const provinceName = provinceData.find(item => item.code === data.province)
+      ?.name_with_type;
+    const districtName = districtData.find(item => item.code === data.district)
+      ?.name_with_type;
+    const addressDetail = `${data.addressDetail}, ${districtName}, ${provinceName}`;
+    const transformData: SignUpType = {
+      HoTen: data.fullName,
+      email: data.email,
+      sdt: data.phoneNumber,
+      tenCh: data.shopName,
+      password: data.password,
+      idLoaiCh: data.shopType,
+      diaChi: addressDetail,
+      quan: districtName,
+    };
+    console.log('transformData:', transformData);
+    try {
+      const res = await authAPI.signUp(transformData);
+      if (res.status === 200) {
+        enqueueSnackbar('Đăng ký thành công', { variant: 'success' });
+        // navigate to beesmart-admin-stage.vercel.app
+        window.location.href = 'https://beesmart-admin-stage.vercel.app';
+        // navigate to login page
+      } else {
+        enqueueSnackbar('Đăng ký thất bại', { variant: 'error' });
+      }
+      console.log('res:', res);
+    } catch (error) {
+      console.log('error:', error);
+    }
   };
   const handleChangeForm = (
     event:
@@ -153,6 +192,36 @@ const SignUpForm = () => {
           error={!!errors.email}
         />
         <TextField
+          id='password'
+          {...register('password', {
+            required: true,
+            minLength: 6,
+            maxLength: 100,
+          })}
+          label='Mật khẩu'
+          variant='outlined'
+          type='password'
+          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
+          onChange={handleChangeForm}
+          helperText={errors.password?.message}
+          error={!!errors.password}
+        />
+        <TextField
+          id='repeatPassword'
+          {...register('repeatPassword', {
+            required: true,
+            minLength: 6,
+            maxLength: 100,
+          })}
+          label='Nhập lại mật khẩu'
+          variant='outlined'
+          type='password'
+          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
+          onChange={handleChangeForm}
+          helperText={errors.repeatPassword?.message}
+          error={!!errors.repeatPassword}
+        />
+        <TextField
           id='phoneNumber'
           {...register('phoneNumber', {
             required: true,
@@ -165,7 +234,43 @@ const SignUpForm = () => {
           helperText={errors.phoneNumber?.message}
           error={!!errors.phoneNumber}
         />
-
+        <TextField
+          id='shopName'
+          {...register('shopName', {
+            required: true,
+            minLength: 6,
+            maxLength: 100,
+          })}
+          label='Tên cửa hàng của bạn'
+          variant='outlined'
+          type='text'
+          className='col-span-2 w-full bg-[#F8F8F8] smd:col-span-2'
+          onChange={handleChangeForm}
+          helperText={errors.shopName?.message}
+          error={!!errors.shopName}
+        />
+        <div className='col-span-2 w-full'>
+          <Select
+            label='Loại cửa hàng'
+            {...register('shopType', {
+              required: true,
+            })}
+            onChange={handleChangeForm}
+            className='w-full bg-[#F8F8F8]'
+            value={formValues.shopType}
+            defaultValue={initForm.shopType}
+            error={!!errors.shopType}
+          >
+            {shopTypes.map((item, i) => (
+              <MenuItem key={i} value={item.value}>
+                {item.label}
+              </MenuItem>
+            ))}
+          </Select>
+          <p className='MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root'>
+            {errors.shopType?.message}
+          </p>
+        </div>
         <div className='col-span-1 w-full smd:col-span-2'>
           <Select
             label='Tỉnh/Thành phố'
@@ -210,51 +315,20 @@ const SignUpForm = () => {
             {errors.district?.message}
           </p>
         </div>
-
         <TextField
-          id='shopName'
-          {...register('shopName', {
+          id='addressDetail'
+          {...register('addressDetail', {
             required: true,
             minLength: 6,
             maxLength: 100,
           })}
-          label='Đặt tên cho gian hàng của bạn'
+          label='Số nhà, tên đường, phường/xã'
           variant='outlined'
           type='text'
           className='col-span-2 w-full bg-[#F8F8F8] smd:col-span-2'
           onChange={handleChangeForm}
-          helperText={errors.shopName?.message}
-          error={!!errors.shopName}
-        />
-        <TextField
-          id='password'
-          {...register('password', {
-            required: true,
-            minLength: 6,
-            maxLength: 100,
-          })}
-          label='Mật khẩu'
-          variant='outlined'
-          type='password'
-          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
-          onChange={handleChangeForm}
-          helperText={errors.password?.message}
-          error={!!errors.password}
-        />
-        <TextField
-          id='repeatPassword'
-          {...register('repeatPassword', {
-            required: true,
-            minLength: 6,
-            maxLength: 100,
-          })}
-          label='Nhập lại mật khẩu'
-          variant='outlined'
-          type='password'
-          className='col-span-1 w-full bg-[#F8F8F8] smd:col-span-2'
-          onChange={handleChangeForm}
-          helperText={errors.repeatPassword?.message}
-          error={!!errors.repeatPassword}
+          helperText={errors.addressDetail?.message}
+          error={!!errors.addressDetail}
         />
         <ButtonLink
           type='submit'
