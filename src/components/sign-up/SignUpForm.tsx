@@ -111,6 +111,7 @@ const SignUpForm = () => {
       password: data.password,
       idLoaiCh: data.shopType,
       diaChi: addressDetail,
+      DiaChi: addressDetail,
       quan: districtName,
     };
     console.log('transformData:', transformData);

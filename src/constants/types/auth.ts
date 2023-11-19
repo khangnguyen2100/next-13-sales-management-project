@@ -7,4 +7,5 @@ export type SignUpType = {
   idLoaiCh: string;
   tenCh: string;
   diaChi: string;
+  DiaChi?: string;
 };
