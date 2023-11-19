@@ -1,6 +1,6 @@
 function SideBar() {
   return (
-    <div className='flex h-full w-full flex-col gap-y-5 self-end rounded-md px-5 shadow-lg rou'>
+    <div className='rou flex h-full w-full flex-col gap-y-5 self-end rounded-md px-5 shadow-lg'>
       <h3>Các hoạt động gần đây</h3>
       <div className='flex items-center justify-between gap-x-8'>
         <span>icon</span>

@@ -2,19 +2,18 @@
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import type { SelectChangeEvent } from '@mui/material';
+import { enqueueSnackbar } from 'notistack';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import { enqueueSnackbar } from 'notistack';
 
+import authAPI from '@/api/auth';
 import ButtonLink from '@/components/common/ButtonLink';
 import { Box, MenuItem, Select, TextField } from '@/components/lib/mui';
-import district_json from 'mocks/quan_huyen.json';
-import province_json from 'mocks/tinh_tp.json';
 import { SignUpType } from '@/constants/types/auth';
 import { shopTypes } from '@/mocks/shopType';
-import authAPI from '@/api/auth';
-import { useRouter } from 'next/router';
+import district_json from 'mocks/quan_huyen.json';
+import province_json from 'mocks/tinh_tp.json';
 
 type FormValue = {
   fullName: string;
@@ -96,13 +95,13 @@ const SignUpForm = () => {
   });
   const [districtData, setDistrictData] = useState(districtJson);
   const formValues = watch();
-  const router = useRouter();
 
   const onSubmit = async (data: FormValue) => {
     const provinceName = provinceData.find(item => item.code === data.province)
       ?.name_with_type;
-    const districtName = districtData.find(item => item.code === data.district)
-      ?.name_with_type;
+    const districtName =
+      districtData.find(item => item.code === data.district)?.name_with_type ||
+      '';
     const addressDetail = `${data.addressDetail}, ${districtName}, ${provinceName}`;
     const transformData: SignUpType = {
       HoTen: data.fullName,
@@ -162,7 +161,7 @@ const SignUpForm = () => {
       <Box
         component='form'
         onSubmit={handleSubmit(onSubmit)}
-        className='mx-auto mt-10 grid max-w-[550px] grid-cols-2 gap-x-4 gap-y-5 bg-white'
+        className='mx-auto mt-4 grid max-w-[550px] grid-cols-2 gap-x-4 gap-y-2 bg-white'
       >
         <TextField
           id='fullName'
@@ -333,7 +332,7 @@ const SignUpForm = () => {
         <ButtonLink
           type='submit'
           color='primary'
-          className='col-span-2 mx-auto mt-4 w-fit'
+          className='col-span-2 mx-auto mt-4 w-fit cursor-pointer'
         >
           Đăng ký
         </ButtonLink>
