@@ -114,16 +114,21 @@ const SignUpForm = () => {
       DiaChi: addressDetail,
       quan: districtName,
     };
-    console.log('transformData:', transformData);
     try {
       const res = await authAPI.signUp(transformData);
-      if (res.status === 200) {
-        enqueueSnackbar('Đăng ký thành công', { variant: 'success' });
+      if (res?.status) {
+        enqueueSnackbar(res?.message || 'Đăng ký thành công', {
+          variant: 'success',
+        });
         // navigate to beesmart-admin-stage.vercel.app
         window.location.href = 'https://beesmart-admin-stage.vercel.app';
-        // navigate to login page
       } else {
-        enqueueSnackbar('Đăng ký thất bại', { variant: 'error' });
+        enqueueSnackbar(
+          res?.error?.email?.[0] || res?.data?.message || 'Đăng ký thất bại',
+          {
+            variant: 'error',
+          },
+        );
       }
       console.log('res:', res);
     } catch (error) {
