@@ -1,9 +1,8 @@
 'use client';
-import { Chart as ChartJS } from 'chart.js/auto';
 import { SlArrowDown } from 'react-icons/sl';
 
-import SideBar from '@/components/admin/DashBoard/SideBar';
 import BarChart from '@/components/admin/DashBoard/LineChart';
+import SideBar from '@/components/admin/DashBoard/SideBar';
 function AdminDashBoard() {
   return (
     <div className='mx-auto grid max-w-xl grid-cols-12 gap-x-8'>
