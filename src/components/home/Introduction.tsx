@@ -13,12 +13,12 @@ const Introduction = () => {
         <div className='ml-auto mr-6 px-4 py-8 md:max-w-[456px] md:py-24  lg:mr-12'>
           <Image src={IntroductionImg} height={446} width={424} alt='intro' />
           <h3 className='mb-3 mt-5 text-3xl'>
-            Chúng tôi sẵn sàng phát triển doanh nghiệp cùng bạn
+            Chúng tôi luôn sẵn sàng đồng hành cùng nhà bán hàng
           </h3>
           <p className='mb-5 text-typo-3'>
-            Tận dụng các khuôn khổ linh hoạt để cung cấp một bản tóm tắt mạnh mẽ
-            cho các tổng quan cấp cao. suy nghĩ để tiếp tục đề xuất giá trị tổng
-            thể.
+            BeeSmart không chỉ là một nền tảng quản lý hàng hóa, mà còn là đối
+            tác đồng hành đáng tin cậy, giúp doanh nghiệp của bạn vươn tới những
+            đỉnh cao mới trong sự đổi mới kinh tế.
           </p>
           <Link
             href={'/contact'}
@@ -33,11 +33,10 @@ const Introduction = () => {
         <h2 className='mb-5 text-4xl text-typo-1 mdd:text-3xl'>
           Beesmart giúp bạn quản lí dễ dàng, bán hàng hiệu quả.
         </h2>
-        <p className='text-typo-3'>
-          Tận dụng các khuôn khổ linh hoạt để cung cấp một bản tóm tắt mạnh mẽ
-          cho các tổng quan cấp cao. Các cách tiếp cận lặp đi lặp lại đối với
-          chiến lược của công ty thúc đẩy tư duy hợp tác để tiến xa hơn về tổng
-          thể.
+        <p className='text-black'>
+          Bee Smart giúp bạn theo dõi tồn kho, cập nhật thông tin về sản phẩm và
+          tạo danh sách hàng hóa một cách nhanh chóng. Bạn sẽ luôn biết được
+          mình còn bao nhiêu hàng trong kho và khi nào cần phải đặt hàng mới.
         </p>
         <div className='mt-5 flex flex-col gap-y-3'>
           <div className='flex items-center gap-x-2'>
@@ -49,7 +48,7 @@ const Introduction = () => {
           <div className='flex items-center gap-x-2'>
             <Image src={VCheck} width={27} height={27} alt='check-icon' />
             <p className='text-lg font-medium text-typo-1'>
-              Phù hợp cho từng ngành hàng
+              Linh hoạt cho nhiều ngành hàng
             </p>
           </div>
           <div className='flex items-center gap-x-2'>

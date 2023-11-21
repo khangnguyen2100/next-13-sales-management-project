@@ -51,14 +51,14 @@ const ContactInfoSection = () => {
         {/* header */}
         <div>
           <HeadingWithDot color='black' variant='secondary' align='start'>
-            Let’s Talk
+            Liên hệ ngay với chúng tôi
           </HeadingWithDot>
           <h2 className='mb-3 mt-4 text-[40px] text-typo-1 mdd:text-3xl'>
-            Get in touch with us
+            Thông tin liên hệ
           </h2>
-          <p className='text-typo-3'>
-            Completely synergize resource taxing relationships via premier niche
-            ynamically innovate state of the art customer service.
+          <p className='text-black'>
+            Hãy liên hệ ngay với chúng tôi để được nhân viên tư vấn một cách chi
+            tiết và tận tình nhất
           </p>
         </div>
         <div className='flex flex-col gap-8'>

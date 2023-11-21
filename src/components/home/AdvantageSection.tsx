@@ -58,12 +58,12 @@ const AdvantageSection = () => {
             Chúng tôi cung cấp giải pháp để phát triển doanh nghiệp của bạn
           </h2>
           <p className='text-whitet mt-2 text-lg'>
-            Leverage agile frameworks to provide a robust synopsis for high
-            level overviews. thinking to further the overall proposition.
+            Trải nghiệm BeeSmart ngay hôm nay mang lại nhiều lợi ích độc đáo cho
+            doanh nghiệp của bạn
           </p>
         </div>
         {/* circular progress */}
-        <div className='mt-9 grid grid-cols-2 gap-4 lg:max-w-[610px] smd:grid-cols-1'>
+        {/* <div className='mt-9 grid grid-cols-2 gap-4 lg:max-w-[610px] smd:grid-cols-1'>
           <CircularItem
             heading='Đã đánh giá & phản hồi'
             description='Khách hàng'
@@ -74,48 +74,56 @@ const AdvantageSection = () => {
             description='Dự án'
             value={85}
           />
-        </div>
+        </div> */}
         {/* check list */}
         <div className='mt-9 grid grid-cols-2 gap-x-5 gap-y-6  mobile:grid-cols-1'>
           <div className='col-span-1 flex items-center gap-x-2'>
             <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
-            <p className='text-lg text-white '>
-              <span className='font-quicksand font-bold '>2,800+ </span>
-              KH đang hoạt động
+            <p className='font-quicksand text-lg font-bold text-white '>
+              Quản lý Hiệu Quả
             </p>
           </div>
           <div className='col-span-1 flex items-center gap-x-2'>
             <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
-            <p className='text-lg text-white '>Kênh hỗ trợ youtube</p>
-          </div>
-          <div className='col-span-1 flex items-center gap-x-2'>
-            <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
-            <p className='text-lg text-white '>
-              <span className='font-quicksand font-bold '>1,670 + </span>
-              <span className='text-[#FFB342]'>5 </span>
-              <Image
-                src={starIcon}
-                width={17}
-                height={17}
-                alt='star'
-                className='inline-block'
-              />
-              {' đánh giá'}
+            <p className='font-quicksand text-lg font-bold text-white '>
+              Tiết Kiệm Thời Gian
             </p>
           </div>
           <div className='col-span-1 flex items-center gap-x-2'>
-            <Link
-              href={'/contact'}
-              className='text-lg font-semibold text-[#40DDB6] underline'
-            >
-              Liên hệ ngay
-            </Link>
+            <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
+            <p className='font-quicksand text-lg font-bold text-white '>
+              Đặt Hàng Thông Minh
+            </p>
+          </div>
+          <div className='col-span-1 flex items-center gap-x-2'>
+            <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
+            <p className='font-quicksand text-lg font-bold text-white '>
+              Linh Hoạt và Tích Hợp Dễ Dàng
+            </p>
+          </div>
+          <div className='col-span-1 flex items-center gap-x-2'>
+            <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
+            <p className='font-quicksand text-lg font-bold text-white '>
+              Phân Tích Thông Minh
+            </p>
+          </div>
+          <div className='col-span-1 flex items-center gap-x-2'>
+            <Image src={vCheckIcon} width={27} height={27} alt='v-check-icon' />
+            <p className='font-quicksand text-lg font-bold text-white '>
+              Hỗ Trợ Khách Hàng Nhanh Chóng
+            </p>
           </div>
         </div>
       </div>
       {/* image */}
       <div className='lg:w-[50%] xl:w-[45%]'>
-        <Image src={Image1} width={868} height={741} alt='home-1' />
+        <Image
+          src={Image1}
+          width={868}
+          height={500}
+          alt='home-1'
+          className='w-full object-cover'
+        />
       </div>
     </div>
   );
