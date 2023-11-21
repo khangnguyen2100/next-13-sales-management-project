@@ -1,13 +1,17 @@
 import { SignUpType } from '@/constants/types/auth';
 
 const authAPI = {
-  signUp: (data: SignUpType) => {
-    console.log('NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL);
-    return fetch(process.env.NEXT_PUBLIC_API_URL + '/register', {
+  signUp: async (data: SignUpType) => {
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL + '/api/register', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: '*/*',
+      },
     });
+    const result = await res.json();
+    return result;
   },
 };
 export default authAPI;
