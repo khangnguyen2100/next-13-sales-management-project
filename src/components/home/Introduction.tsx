@@ -31,7 +31,7 @@ const Introduction = () => {
       {/* content side */}
       <div className='flex-1 px-4 md:max-w-[669px]'>
         <h2 className='mb-5 text-4xl text-typo-1 mdd:text-3xl'>
-          Kioviet giúp bạn quản lí dễ dàng, bán hàng hiệu quả.
+          Beesmart giúp bạn quản lí dễ dàng, bán hàng hiệu quả.
         </h2>
         <p className='text-typo-3'>
           Tận dụng các khuôn khổ linh hoạt để cung cấp một bản tóm tắt mạnh mẽ
