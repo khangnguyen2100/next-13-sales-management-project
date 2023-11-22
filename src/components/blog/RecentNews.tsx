@@ -62,7 +62,7 @@ function RecentNews() {
   return (
     <div className='my-24 flex flex-col mdd:px-4'>
       <HeadingWithDot variant='secondary' color='black' align='center'>
-        Our Recent News
+       Tin gần đây
       </HeadingWithDot>
       <h2 className='mx-auto mb-10 max-w-[815px] text-center text-[36px] capitalize mdd:text-3xl mobile:text-2xl'>
         Featured News And Insights

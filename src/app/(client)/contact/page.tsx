@@ -8,7 +8,7 @@ export default function Index() {
     <>
       <Banner
         imageSrc={BannerImage}
-        heading='Contact Us'
+        heading='Thông tin liên hệ'
         title='Hãy liên hệ với chúng tôi'
       ></Banner>
       <ContactInfoSection />

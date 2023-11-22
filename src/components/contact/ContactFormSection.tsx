@@ -41,10 +41,10 @@ const ContactFormSection = () => {
   return (
     <div className='container mb-28'>
       <HeadingWithDot variant='secondary' color='black' align='center'>
-        Contact Us
+        Nhập thông tin liên hệ tư vấn
       </HeadingWithDot>
       <h2 className='text-center text-[40px] text-typo-1 lgd:text-3xl mdd:text-3xl'>
-        Request A Call Back !
+        Đăng kí thông tin tư vấn tại đây!
       </h2>
       <Box
         component='form'
@@ -110,7 +110,7 @@ const ContactFormSection = () => {
           color='primary'
           className='col-span-2 mx-auto w-fit px-[60px]'
         >
-          Submit
+          Gửi
         </ButtonLink>
       </Box>
     </div>

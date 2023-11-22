@@ -15,23 +15,44 @@ type WorkProcessCard = {
 };
 const WorkProcessCardList: WorkProcessCard[] = [
   {
-    title: 'Make Appointment',
+    title: 'Sự Sáng Tạo',
     content:
-      'Leverage agile frameworks providesynopsishigh level overviews proposition.',
+      'Chúng tôi khuyến khích mọi ý kiến mới và luôn tìm kiếm cách tiếp cận sáng tạo để giải quyết thách thức và cung cấp giải pháp cho khách hàng.',
     href: '#!',
     icon: WorkProcessIcon1,
   },
   {
-    title: 'Consultation',
+    title: 'Giao Tiếp Cởi Mở',
     content:
-      'Leverage agile frameworks providesynopsishigh level overviews value proposition. ',
+      'Chúng tôi coi trọng sự giao tiếp hiệu quả và mở cửa giữa các bộ phận và thành viên, giúp mỗi người hiểu rõ mục tiêu chung và đóng góp của mình. ',
     href: '#!',
     icon: WorkProcessIcon2,
   },
   {
-    title: 'Enjoy the Service',
+    title: 'Tinh Thần Đồng Đội',
     content:
-      'Leverage agile frameworks providesynopsishigh level overviews value proposition. ',
+      'Tại BeeSmart, chúng tôi là một gia đình. Chúng tôi hỗ trợ và tôn trọng lẫn nhau, tạo ra một môi trường làm việc tích cực và đầy động lực. ',
+    href: '#!',
+    icon: WorkProcessIcon3,
+  },
+  {
+    title: 'Tận Tâm và Hiệu Quả',
+    content:
+      'Mỗi thành viên của chúng tôi cam kết đem lại chất lượng và tận tâm trong mọi công việc. Sự hiệu quả là chìa khóa giúp chúng tôi đạt được mục tiêu và vượt qua mọi thách thức. ',
+    href: '#!',
+    icon: WorkProcessIcon3,
+  },
+  {
+    title: 'Học Hỏi Liên Tục',
+    content:
+      'Chúng tôi không ngừng nỗ lực học hỏi và phát triển cá nhân, luôn theo đuổi sự hoàn thiện để duy trì vị thế dẫn đầu trong ngành công nghiệp. ',
+    href: '#!',
+    icon: WorkProcessIcon3,
+  },
+  {
+    title: 'Linhh Hoạt và Đổi Mới',
+    content:
+      'Tính linh hoạt và khả năng thích ứng là những đặc điểm quan trọng của chúng tôi. Chúng tôi không ngần ngại đối mặt với thay đổi và đưa ra những ý tưởng mới để nâng cao sản phẩm và dịch vụ của mình. ',
     href: '#!',
     icon: WorkProcessIcon3,
   },
@@ -40,12 +61,12 @@ function WorkProcess() {
   return (
     <div className='mx-auto mb-24 flex max-w-large flex-col items-center justify-center gap-y-4 '>
       <HeadingWithDot variant='secondary' color='black' className='mb-4'>
-        Quá trình làm việc
+        Châm ngôn làm việc
       </HeadingWithDot>
       <h2 className='mx-auto mb-10 max-w-[815px] text-center text-[36px] capitalize mdd:px-4 mdd:text-3xl mobile:text-2xl'>
-        Cách làm việc của chúng tôi
+        Chúng tôi hoạt động dựa trên các tiêu chí
       </h2>
-      <div className='grid max-w-full grid-cols-12 gap-x-7 mdd:gap-y-14 '>
+      <div className='grid max-w-full grid-cols-12 gap-x-7 gap-y-16 mdd:gap-y-14 '>
         {WorkProcessCardList.map((item, index) => {
           const { title, content, href, icon } = item;
           return (
@@ -60,10 +81,6 @@ function WorkProcess() {
               {/* Title */}
               <h3 className='text-2xl font-semibold'>{title}</h3>
               <p className='flex-1 text-lg'>{content}</p>
-              {/* Button */}
-              <ButtonLink color='secondary' href={href}>
-                Xem thêm
-              </ButtonLink>
             </div>
           );
         })}
