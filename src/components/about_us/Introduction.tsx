@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
 
-import IntroductionImg from 'public/t1con.jpg';
+import IntroductionImg from 'public/images/teamIMG.jpg';
 import VCheck from 'public/icons/v-check.svg';
 
 const Introduction = () => {
@@ -13,10 +13,10 @@ const Introduction = () => {
         <div className='ml-auto mr-6 px-4 py-8 md:max-w-[456px] md:py-24  lg:mr-12'>
           <Image
             src={IntroductionImg}
-            height={500}
+            height={300}
             width={424}
             alt='intro'
-            className='mx-auto'
+            className='mx-auto object-cover'
           />
           <h3 className='mb-3 mt-5 text-3xl'>Phong cách làm việc</h3>
           <p className='mb-5 text-typo-3'>

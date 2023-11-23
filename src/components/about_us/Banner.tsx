@@ -1,4 +1,4 @@
-import BannerImg from 'public/images/about_us/Banner.jpg';
+import BannerImg from 'public/images/teamIMG.jpg';
 
 import HeroBanner from '../common/HeroBanner';
 function AboutUsBanner() {
