@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import ButtonLink from '@/components/common/ButtonLink';
 import HeroBanner from '@/components/common/HeroBanner';
-import BannerImg from 'public/images/home/banner.jpg';
+import BannerImg from 'public/images/z4902222891821_b0d8852404d097cd5f67895a979f71ea.jpg';
 import PlayVideoIcon from 'public/icons/play-video.svg';
 
 const HomeHeroBanner = () => {
