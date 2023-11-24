@@ -21,6 +21,10 @@ const navLins: NavLink[] = [
     href: '/services',
   },
   {
+    label: 'Gói dịch vụ',
+    href: '/pricing',
+  },
+  {
     label: 'Bài viết',
     href: '/blog',
   },
