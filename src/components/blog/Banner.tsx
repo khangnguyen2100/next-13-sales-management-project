@@ -7,10 +7,10 @@ function BlogBanner() {
     <HeroBanner imageSrc={Banner} height='small'>
       <div className='flex flex-col'>
         <HeadingWithDot variant='secondary' color='white' align='start'>
-          Recent News
+          Tin tức
         </HeadingWithDot>
         <h1 className='text-5xl font-bold leading-[1.1] text-white md:text-[60px]'>
-          We Keep You Updated
+          Tin tức thị trường
         </h1>
       </div>
     </HeroBanner>

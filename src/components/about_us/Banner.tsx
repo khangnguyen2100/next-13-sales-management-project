@@ -1,4 +1,4 @@
-import BannerImg from 'public/images/about_us/Banner.jpg';
+import BannerImg from 'public/images/teamIMG.jpg';
 
 import HeroBanner from '../common/HeroBanner';
 function AboutUsBanner() {
@@ -12,8 +12,9 @@ function AboutUsBanner() {
         Thông tin về chúng tôi
       </h1>
       <div className='mt-9 text-lg text-white '>
-        Collaboratively administrate empowered markets plug and play networks
-        dynamically procrastinated
+        BeeSmart không chỉ là một công cụ, mà là một đối tác chiến lược trong
+        việc xây dựng sự thành công kinh doanh của bạn. Hãy đồng hành cùng chúng
+        tôi trên hành trình đổi mới và hiệu suất!
       </div>
     </HeroBanner>
   );

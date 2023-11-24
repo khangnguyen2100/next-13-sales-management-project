@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 import ButtonLink from '@/components/common/ButtonLink';
 import HeroBanner from '@/components/common/HeroBanner';
-import BannerImg from 'public/images/home/banner.jpg';
+import BannerImg from 'public/images/z4902222891821_b0d8852404d097cd5f67895a979f71ea.jpg';
 import PlayVideoIcon from 'public/icons/play-video.svg';
 
 const HomeHeroBanner = () => {
   return (
-    <HeroBanner imageSrc={BannerImg} height='large'>
+    <HeroBanner imageSrc={BannerImg} height='medium'>
       <div className='mb-3 flex items-center gap-x-[7px]'>
         <div className='h-3 w-3 bg-secondary'></div>
         <p className='text-lg text-white'>
@@ -17,13 +17,13 @@ const HomeHeroBanner = () => {
           <span className='font-semibold text-secondary'> BeeSmart</span>
         </p>
       </div>
-      <h1 className='text-5xl font-bold leading-[1.1] text-white md:text-[60px]'>
-        <span className='block'>Phần mềm</span>
+      <h1 className='text-5xl font-bold leading-[1.1] text-white md:text-[40px]'>
+        <span className='block'>Đối tác</span>
         <span className='block'>
           <span className='text-secondary'>Quản lí </span>
-          bán hàng
+          hàng hóa
         </span>
-        <span className='block'>phổ biến nhất</span>
+        <span className='block'>tốt nhất cho nhà bán hàng</span>
       </h1>
       <div className='mt-9 flex items-center gap-x-8'>
         <ButtonLink color='secondary' type='button' href='/sign-up'>

@@ -1,12 +1,11 @@
 import ClientLayout from '@/components/Layout/ClientLayout';
+import { RecentNews } from '@/components/blog';
 import {
   HomeHeroBanner,
   Introduction,
   Solutions,
-  Subscribe,
   AdvantageSection,
 } from '@/components/home';
-import ReviewList from 'components/review/ReviewList';
 
 export default function Home() {
   return (
@@ -15,8 +14,8 @@ export default function Home() {
       <Introduction />
       <Solutions />
       <AdvantageSection />
-      <ReviewList />
-      <Subscribe />
+      {/* <Subscribe /> */}
+      <RecentNews></RecentNews>
     </ClientLayout>
   );
 }
