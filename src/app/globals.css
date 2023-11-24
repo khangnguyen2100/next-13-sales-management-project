@@ -47,6 +47,13 @@
     justify-content: center;
     align-items: start;
   }
+  .blogContainer li {
+    list-style: none;
+    text-align: justify;
+  }
+  .blogContainer p {
+    text-align: justify;
+  }
 }
 
 * {
