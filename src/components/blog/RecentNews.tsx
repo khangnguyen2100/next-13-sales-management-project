@@ -1,9 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
-import RecentNewImage1 from 'public/images/blog/Recent_blog-1.jpg';
-import RecentNewImage2 from 'public/images/blog/Recent_blog-2.jpg';
-import RecentNewImage3 from 'public/images/blog/Recent_blog-3.jpg';
-import RecentNewImage4 from 'public/images/blog/Recent_blog-4.jpg';
+import { formatDate } from '@/utils/formatDate';
+import { getNews } from '@/utils/tin/getNews';
 
 import HeadingWithDot from '../common/HeadingWithDot';
 import ButtonLink from '../common/ButtonLink';
@@ -22,32 +20,18 @@ export type RecentNewType = {
   deleted_at: string;
 };
 
-// export const getServerSideProps = async () => {
-//   console.log('running');
-
-//   const data = await fetch(`https://admin.beesmart.io.vn/api/tin`);
-//   return { props: { data } };
-// };
-export async function getNews() {
-  // Fetch data from external API
-  const res = await fetch(`https://admin.beesmart.io.vn/api/tin`);
-  const data = await res.json();
-  return data;
-}
-
 async function RecentNews() {
   const blogData = await getNews();
-  const recentNewBlog: RecentNewType[] = blogData.danhsachtin;
   return (
     <div className='mb-24 mt-10 flex flex-col mdd:px-4'>
       <HeadingWithDot variant='secondary' color='black' align='center'>
         Tin gần đây
       </HeadingWithDot>
       <h2 className='mx-auto mb-10 max-w-[815px] text-center text-[36px] capitalize mdd:text-3xl mobile:text-2xl'>
-        Featured News And Insights
+        Có thể bạn chưa biết
       </h2>
       <div className='mx-auto grid max-w-large grid-cols-12 gap-x-9 gap-y-10 mdd:w-full'>
-        {recentNewBlog.map((item: any, index: number) => {
+        {blogData.map((item: any, index: number) => {
           const { tieuDe, urlHinh, tomTat, created_at, view, slug } = item;
           return (
             <div
@@ -68,7 +52,7 @@ async function RecentNews() {
                     href='#!'
                     className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm '
                   >
-                    {created_at}
+                    {formatDate(created_at)}
                   </ButtonLink>
                   <ButtonLink
                     color='secondary'

@@ -231,7 +231,7 @@ const PricingOptionSection = () => {
                   return;
                 }
                 setOpen(false);
-                handleSubscribe(planType);
+                planType && handleSubscribe(planType);
               }}
             >
               Xác nhận

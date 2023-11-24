@@ -50,9 +50,14 @@
   .blogContainer li {
     list-style: none;
     text-align: justify;
+    margin: 8px 0;
   }
   .blogContainer p {
     text-align: justify;
+    margin: 8px 0;
+  }
+  .blogContainer h2 {
+    margin: 20px 0;
   }
 }
 
