@@ -17,8 +17,7 @@ export default async function BlogDetail({
     </div>
   );
 }
-
- async function getNew(slug: string) {
+async function getNew(slug: string) {
   // Fetch data from external API
   const res = await fetch(`https://admin.beesmart.io.vn/api/tin/${slug}`);
   const data = await res.json();
