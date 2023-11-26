@@ -58,16 +58,14 @@ const Header = () => {
             })}
           </ul>
           {/* login button */}
-          <ButtonLink
-            color='primary'
-            onClick={() => {
-              window.open(
-                `${process.env.NEXT_PUBLIC_HOST_URL}/dang-nhap`,
-                '_blank',
-              );
-            }}
-          >
-            Đăng nhập
+          <ButtonLink color='primary'>
+            <Link
+              href={`${process.env.NEXT_PUBLIC_HOST_URL}/dang-nhap`}
+              className='text-inherit'
+              target='_blank'
+            >
+              Đăng nhập
+            </Link>
           </ButtonLink>
         </div>
         {/* nav */}
