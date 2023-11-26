@@ -40,7 +40,7 @@ async function RecentNews() {
             >
               <div className='mobile:max-w-[288px]'>
                 <Image
-                  src={`https://admin.beesmart.io.vn/${urlHinh}`}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}/${urlHinh}`}
                   alt={tieuDe}
                   className='mx-auto w-full object-cover'
                   width={500}
