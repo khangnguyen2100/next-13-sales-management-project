@@ -4,11 +4,15 @@ import Button from '@mui/joy/Button';
 import { formLabelClasses } from '@mui/joy/FormLabel';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import Typography from '@mui/joy/Typography';
+import { Metadata } from 'next';
 
 import LoginForm from '@/components/login/LoginForm';
 import GoogleIcon from '@/components/login/GoogleIcon';
 import Logo from '@/components/common/Logo/Logo';
 
+export const metadata: Metadata = {
+  title: 'Đăng nhập - Beesmart',
+};
 export default function JoySignInSideTemplate() {
   return (
     <>

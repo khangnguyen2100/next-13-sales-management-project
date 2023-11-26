@@ -1,8 +1,13 @@
+import { Metadata } from 'next';
+
 import Banner from '@/components/common/Banner';
 import { Solutions } from '@/components/home';
 import ReviewList from '@/components/review/ReviewList';
 import { ServicesAdvance, ServicesOffering } from '@/components/services';
 import BannerImg from 'public/images/services/banner.jpg';
+export const metadata: Metadata = {
+  title: 'Dịch vụ - Beesmart',
+};
 export default function Index() {
   return (
     <>

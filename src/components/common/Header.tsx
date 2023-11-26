@@ -58,7 +58,15 @@ const Header = () => {
             })}
           </ul>
           {/* login button */}
-          <ButtonLink href='/login' color='primary'>
+          <ButtonLink
+            color='primary'
+            onClick={() => {
+              window.open(
+                `${process.env.NEXT_PUBLIC_HOST_URL}/dang-nhap`,
+                '_blank',
+              );
+            }}
+          >
             Đăng nhập
           </ButtonLink>
         </div>
