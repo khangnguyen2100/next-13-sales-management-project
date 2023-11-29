@@ -11,6 +11,7 @@ import { Divider } from '@/components/lib/mui';
 import { Input } from '../lib/joy';
 
 import ButtonLink from './ButtonLink';
+import FooterForm from './FormFooter';
 
 export interface ContactItemProp {
   heading: string;
@@ -31,7 +32,7 @@ const footerLinks: FooterColumnLink[] = [
     links: [
       {
         label: 'Về BeeSmart',
-        href: '/about-us',
+        href: '   us',
       },
       {
         label: 'Dịch vụ',
@@ -157,26 +158,7 @@ const Footer = () => {
           <div className='w-full bg-section-4 px-8  py-9 text-white mdd:px-4 mdd:py-5'>
             <h3 className='mb-3 text-xl font-semibold'>Đăng ký</h3>
             <p className='mb-3'>Tham gia danh sách gửi thư để nhận tin tức</p>
-            <form className='flex items-center'>
-              <Input
-                type='email'
-                required
-                placeholder='Địa chỉ email của bạn'
-                className='w-full flex-1 rounded-none border-none bg-white px-5 py-4 font-medium text-typo-1 outline-none placeholder-shown:text-typo-3 focus:outline-none'
-                sx={{
-                  '&::before': {
-                    display: 'none',
-                  },
-                }}
-              />
-              <ButtonLink
-                color='primary'
-                type='submit'
-                className='h-[56px] w-[116px] rounded-l-none !p-[0] mdd:text-sm'
-              >
-                Đăng ký
-              </ButtonLink>
-            </form>
+            <FooterForm></FooterForm>
           </div>
         </div>
       </div>
