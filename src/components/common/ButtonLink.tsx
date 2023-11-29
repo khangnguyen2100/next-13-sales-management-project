@@ -1,3 +1,4 @@
+import { Button } from '@mui/joy';
 import clsx from 'clsx';
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
@@ -9,6 +10,7 @@ type Props = {
   href?: string;
   type?: 'submit' | 'button';
   onClick?: () => void;
+  loading?: boolean;
 };
 
 const ButtonLink = (props: Props) => {
@@ -19,10 +21,12 @@ const ButtonLink = (props: Props) => {
     href,
     type = 'button',
     onClick,
+    loading,
   } = props;
   return (
-    <button
+    <Button
       type={type}
+      loading={loading || undefined}
       className={clsx(
         'border-none px-7 py-4  text-center text-lg font-semibold',
         color === 'primary'
@@ -41,7 +45,7 @@ const ButtonLink = (props: Props) => {
       ) : (
         <>{children}</>
       )}
-    </button>
+    </Button>
   );
 };
 
