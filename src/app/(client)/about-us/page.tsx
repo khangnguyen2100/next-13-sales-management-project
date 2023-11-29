@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import {
   AboutUsBanner,
   Introduction,
@@ -5,6 +7,9 @@ import {
   WorkProcess,
 } from '@/components/about_us';
 
+export const metadata: Metadata = {
+  title: 'Giới thiệu - Beesmart',
+};
 function AboutUs() {
   return (
     <>

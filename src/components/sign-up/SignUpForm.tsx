@@ -121,7 +121,9 @@ const SignUpForm = () => {
           variant: 'success',
         });
         // navigate to beesmart-admin-stage.vercel.app
-        window.location.href = 'https://beesmart-admin-stage.vercel.app';
+        window.location.href =
+          process.env.NEXT_PUBLIC_HOST_URL ||
+          'https://beesmart-admin-stage.vercel.app';
       } else {
         enqueueSnackbar(
           res?.error?.email?.[0] || res?.data?.message || 'Đăng ký thất bại',

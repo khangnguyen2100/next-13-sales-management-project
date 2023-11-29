@@ -4,9 +4,12 @@ import { RecentNewType } from '@/components/blog/RecentNews';
 import { getNews } from '@/utils/tin/getNews';
 async function getNew(slug: string) {
   // Fetch data from external API
-  const res = await fetch(`https://admin.beesmart.io.vn/api/tin/${slug}`, {
-    cache: 'no-store',
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/tin/${slug}`,
+    {
+      cache: 'no-store',
+    },
+  );
   const data = await res.json();
 
   return data.data;

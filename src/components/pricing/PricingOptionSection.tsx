@@ -64,10 +64,10 @@ const PricingOptionSection = () => {
           align='center'
           className='mb-4'
         >
-          Simple Pricing Option
+          Gói dịch vụ
         </HeadingWithDot>
         <h2 className='text-[40px] text-typo-1 mdd:text-3xl'>
-          Choose the Right Plan for Your and Your Team
+          Chọn gói phù hợp với nhu cầu của bạn
         </h2>
       </div>
       <div className='grid grid-cols-3 place-items-start gap-8 lgd:grid-cols-2 smd:grid-cols-1'>
@@ -76,24 +76,12 @@ const PricingOptionSection = () => {
           <h3 className='text-[32px] text-typo-1'>Basic</h3>
           <Divider className='!my-6' />
           <h3 className='text-[40px]'>
-            $7.99<span className='text-2xl'>/ month</span>
+            159.000 VNĐ<span className='text-2xl'>/ tháng</span>
           </h3>
-          <div className='mt-6 bg-secondary px-8 py-2 text-[#208068] lg:mx-9'>
-            Billed as $96 per year
-          </div>
-          <Divider className='!my-6' />
           <div className='text-center leading-[2.5] text-typo-3'>
-            <p>Unlimited members</p>
             <p>
-              <strong className='text-typo-1'>Unlimited</strong> feedback
+              Quản lý <strong className='text-typo-1'>1 cửa hàng</strong>
             </p>
-            <p>Weekly team Feedback Friday</p>
-            <p>
-              Custom Kudos{' '}
-              <strong className='text-typo-1'>+9 illustration</strong>
-            </p>
-            <p>Team feedback history (30 items)</p>
-            <p>Personal feedback</p>
           </div>
           <ButtonLink
             className='mt-8 cursor-pointer'
@@ -104,38 +92,24 @@ const PricingOptionSection = () => {
               setOpen(true);
             }}
           >
-            Get Started
+            Đăng ký
           </ButtonLink>
         </div>
         {/* Advance */}
         <div className='group relative col-span-1 w-full'>
           <div className='transition-md flex-center absolute inset-x-0 top-0 z-[1] h-[50px] w-full bg-secondary text-center font-quicksand text-xl font-bold  text-white group-hover:-translate-y-full'>
-            Most Popular
+            Phổ biến nhất
           </div>
           <div className='relative z-[2] w-full bg-primary px-7 py-11 text-center text-white shadow-md lgd:px-4 mdd:py-8'>
             <h3 className='text-[32px] text-white'>Advanced</h3>
             <Divider className='!my-6 bg-white' />
             <h3 className='text-[40px]'>
-              $8.99<span className='text-2xl'>/ month</span>
+              229.000 VNĐ<span className='text-2xl'>/ tháng</span>
             </h3>
-            <div className='mt-6 bg-white px-8 py-2 text-primary lg:mx-9'>
-              Billed as $119 per year
-            </div>
-            <Divider className='!my-6 bg-white' />
-            <div className='text-center leading-[2.5] text-white'>
-              <p>Unlimited members</p>
+            <div className='text-center leading-[2.5] text-typo-3'>
               <p>
-                <strong className='text-bg-secondary'>Unlimited</strong>{' '}
-                feedback
+                Quản lý <strong className='text-typo-1'>3 cửa hàng</strong>
               </p>
-              <p>Weekly team Feedback Friday</p>
-              <p>
-                Custom Kudos{' '}
-                <strong className='text-bg-secondary'>+9 illustration</strong>
-              </p>
-              <p>Team feedback history (30 items)</p>
-              <p>Personal feedback history (6 items)</p>
-              <p>Slack integration</p>
             </div>
             <ButtonLink
               className='mt-8 cursor-pointer !bg-white !text-primary'
@@ -146,7 +120,7 @@ const PricingOptionSection = () => {
                 setOpen(true);
               }}
             >
-              Get Started
+              Đăng ký
             </ButtonLink>
           </div>
         </div>
@@ -155,25 +129,14 @@ const PricingOptionSection = () => {
           <h3 className='text-[32px] text-typo-1'>Pro</h3>
           <Divider className='!my-6' />
           <h3 className='text-[40px]'>
-            $9.99<span className='text-2xl'>/ month</span>
+            299.000 VNĐ<span className='text-2xl'>/ tháng</span>
           </h3>
-          <div className='mt-6 bg-secondary px-8 py-2 text-[#208068] lg:mx-9'>
-            Billed as $199 per year
-          </div>
-          <Divider className='!my-6' />
           <div className='text-center leading-[2.5] text-typo-3'>
-            <p>Unlimited members</p>
             <p>
-              <strong className='text-typo-1'>Unlimited</strong> feedback
+              <strong className='text-typo-1'>
+                Tạo cửa hàng không giới hạn
+              </strong>
             </p>
-            <p>Weekly team Feedback Friday</p>
-            <p>
-              Custom Kudos{' '}
-              <strong className='text-typo-1'>+9 illustration</strong>
-            </p>
-            <p>Team feedback history (30 items)</p>
-            <p>Personal feedback history (6 items)</p>
-            <p>Slack integration</p>
           </div>
           <ButtonLink
             className='mt-8 cursor-pointer'
@@ -184,7 +147,7 @@ const PricingOptionSection = () => {
               setOpen(true);
             }}
           >
-            Get Started
+            Đăng ký
           </ButtonLink>
         </div>
       </div>

@@ -58,8 +58,14 @@ const Header = () => {
             })}
           </ul>
           {/* login button */}
-          <ButtonLink href='/login' color='primary'>
-            Đăng nhập
+          <ButtonLink color='primary'>
+            <Link
+              href={`${process.env.NEXT_PUBLIC_HOST_URL}/dang-nhap`}
+              className='text-inherit'
+              target='_blank'
+            >
+              Đăng nhập
+            </Link>
           </ButtonLink>
         </div>
         {/* nav */}

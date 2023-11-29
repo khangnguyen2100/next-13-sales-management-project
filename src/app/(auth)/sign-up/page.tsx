@@ -1,7 +1,12 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 import SignUpForm from '@/components/sign-up/SignUpForm';
 import ImageSrc from 'public/images/auth/sign-up-banner.jpg';
+
+export const metadata: Metadata = {
+  title: 'Đăng ký - Beesmart',
+};
 function Page() {
   return (
     <div className={'relative flex min-h-screen w-full items-center'}>
