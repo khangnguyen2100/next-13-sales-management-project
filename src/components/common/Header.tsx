@@ -60,7 +60,7 @@ const Header = () => {
           {/* login button */}
           <ButtonLink color='primary'>
             <Link
-              href={`${process.env.NEXT_PUBLIC_HOST_URL}/dang-nhap`}
+              href={`${process.env.NEXT_PUBLIC_HOST_URL}`}
               className='text-inherit'
               target='_blank'
             >
