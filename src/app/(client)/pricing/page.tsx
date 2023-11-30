@@ -14,7 +14,7 @@ export default function Index() {
         heading='Gói dịch vụ'
         title='Chọn gói dịch vụ phù hợp với bạn'
       ></Banner>
-      <PricingOptionSection />
+      
     </>
   );
 }
