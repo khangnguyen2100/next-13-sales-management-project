@@ -52,7 +52,7 @@ const ServicesAdvance = () => {
           {/* header */}
           <div className='lg:max-w-[572px]'>
             <HeadingWithDot color='black' variant='primary' align='start'>
-              Tại sao lại chọn KioViet
+              Tại sao lại chọn BeeSmart
             </HeadingWithDot>
             <h2 className='mb-6 mt-3 text-3xl font-bold mdd:text-2xl'>
               Chúng tôi cung cấp giải pháp để phát triển doanh nghiệp của bạn
