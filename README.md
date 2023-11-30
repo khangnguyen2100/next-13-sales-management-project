@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 13 Sales Management Project
 
-## Getting Started
+Mô tả ngắn về dự án : Đây là 1 trang web quảng cáo về công cụ hỗ trợ quản lý cửa hàng trực tuyến. Được tạo nên bởi Create next app , typescript, tailwindcss, Mui
 
-First, run the development server:
+## Cài Đặt
+
+Hướng dẫn cài đặt dự án trên máy của bạn.
 
 ```bash
+# Sao chép repository
+git clone https://github.com/khangnguyen2100/next-13-sales-management-project.git
+
+# Di chuyển vào thư mục dự án
+cd next-13-sales-management-project
+
+# Cài đặt các dependencies
+npm install
+
+# Chạy ứng dụng
+Hướng dẫn chạy ứng dụng trong môi trường phát triển.
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#Cấu Trúc Thư Mục
+src/           # Mã nguồn chính của ứng dụng
+|-- app/          # Các trang của ứng dụng
+|-- components/   # Các thành phần React tái sử dụng
+|-- utils/        # Các hàm tiện ích
+|-- constants/    # Các type khai báo
+|-- utils/        # Các hàm tiện ích
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+public/        # Tất cả các tệp tin và hình ảnh tĩnh
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
