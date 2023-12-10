@@ -289,6 +289,7 @@ const SignUpForm = () => {
             value={formValues.province}
             defaultValue={initForm.province}
             error={!!errors.province}
+            disabled={true}
           >
             {provinceData.map((item, i) => (
               <MenuItem key={i} value={item.code}>
