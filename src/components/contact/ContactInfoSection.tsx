@@ -11,13 +11,13 @@ import { ContactItemProp } from '../common/Footer';
 
 const contacts: ContactItemProp[] = [
   {
-    heading: 'Liên hệ',
-    description: '+01 569 896 654',
+    heading: 'Số điện thoại',
+    description: '0779750024',
     icon: PhoneIcon,
   },
   {
-    heading: 'Mail Us',
-    description: 'Info@Example.com',
+    heading: 'Email',
+    description: 'beesmart301@gmail.com',
     icon: MailIcon,
   },
   {

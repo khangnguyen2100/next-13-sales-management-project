@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -14,33 +14,38 @@ import HeadingWithDot from '../common/HeadingWithDot';
 type SolutionItem = {
   title: string;
   href: string;
-  icon: StaticImageData;
+  icon: ReactNode;
   content: string;
 };
 const solutionList: SolutionItem[] = [
   {
     title: 'Quản lý hàng hóa',
     href: '/',
-    icon: Icon1,
+    icon: <i className='fa-solid fa-box-circle-check text-4xl text-white'></i>,
     content: 'Bạn có thể quản lý các sản phẩm đang bán tại cửa hàng của mình',
   },
   {
     title: 'Quản lý hóa đơn',
     href: '/',
-    icon: Icon2,
+    icon: <i className='fa-solid fa-file-invoice text-4xl text-white'></i>,
     content: 'Bạn có thể kiểm tra lại các đơn hàng đã bán qua từng ngày',
   },
   {
     title: 'Quản lý doanh thu',
     href: '/',
-    icon: Icon3,
-    content: 'Hệ thống cung cấp biểu đồ doanh thu theo ngày/tháng giúp bạn theo dõi tiến độ kinh doanh của cửa hàng',
+    icon: (
+      <i className='fa-solid fa-hand-holding-dollar text-4xl text-white'></i>
+    ),
+    content:
+      'Hệ thống cung cấp biểu đồ doanh thu theo ngày/tháng giúp bạn theo dõi tiến độ kinh doanh của cửa hàng',
   },
+
   {
     title: 'Quản lý tồn kho',
     href: '/',
-    icon: Icon3,
-    content: 'Beesmart giúp bạn theo dõi số lượng hàng hóa còn lại trong cửa hàng để kịp thời bổ sung',
+    icon: <i className='fa-duotone fa-boxes-stacked text-4xl text-white'></i>,
+    content:
+      'Beesmart giúp bạn theo dõi số lượng hàng hóa còn lại trong cửa hàng để kịp thời bổ sung',
   },
 ];
 
@@ -61,7 +66,7 @@ const Solutions = ({ full = false }: { full?: Boolean }) => {
           return (
             <div
               key={i}
-              className='transition-md group col-span-3 flex min-h-[173px] items-center justify-between bg-section-5 p-[30px] hover:shadow-md mdd:p-5'
+              className='transition-md group col-span-3 flex min-h-[173px] items-center justify-between bg-section-5 p-[30px]  mdd:p-5'
             >
               {/* content */}
               <div className='max-w-[70%]'>
@@ -69,14 +74,15 @@ const Solutions = ({ full = false }: { full?: Boolean }) => {
                 <p>{content}</p>
               </div>
               {/* icon */}
-              <div className='flex-center transition-md h-[72px] w-[72px] shrink-0 rounded-full bg-secondary shadow-md group-hover:bg-primary'>
-                <Image
+              <div className='flex-center transition-md h-[72px] w-[72px] shrink-0 rounded-full bg-primary shadow-md'>
+                {/* <Image
                   src={icon}
                   alt={title}
                   width={42}
                   height={42}
                   className='object-cover'
-                />
+                /> */}
+                {item.icon}
               </div>
             </div>
           );

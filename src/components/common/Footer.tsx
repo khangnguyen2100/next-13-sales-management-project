@@ -32,15 +32,11 @@ const footerLinks: FooterColumnLink[] = [
     links: [
       {
         label: 'Về BeeSmart',
-        href: '   us',
+        href: '/about-us',
       },
       {
         label: 'Dịch vụ',
         href: '/services',
-      },
-      {
-        label: 'Phí dịch vụ',
-        href: '/pricing',
       },
       {
         label: 'Bài viết',
@@ -56,10 +52,6 @@ const footerLinks: FooterColumnLink[] = [
         href: '/blog',
       },
       {
-        label: 'Câu hỏi thường gặp',
-        href: '/faq',
-      },
-      {
         label: 'Liên hệ',
         href: '/contact',
       },
@@ -70,12 +62,12 @@ const footerLinks: FooterColumnLink[] = [
 const contacts: ContactItemProp[] = [
   {
     heading: 'Liên hệ',
-    description: '+01 569 896 654',
+    description: '0779750024',
     icon: PhoneIcon,
   },
   {
     heading: 'Mail Us',
-    description: 'Info@Example.com',
+    description: 'beesmart301@gmail.com',
     icon: MailIcon,
   },
   {

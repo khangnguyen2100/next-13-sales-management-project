@@ -52,7 +52,7 @@ const AdvantageSection = () => {
         {/* header */}
         <div className='lg:max-w-[572px]'>
           <HeadingWithDot color='white' variant='secondary' align='start'>
-            Tại sao lại chọn KioViet
+            Tại sao lại chọn BeeSmart
           </HeadingWithDot>
           <h2 className='text-3xl font-bold mdd:text-2xl'>
             Chúng tôi cung cấp giải pháp để phát triển doanh nghiệp của bạn
