@@ -20,8 +20,6 @@ export default function Index() {
       ></Banner>
       <Solutions full />
       <PricingOptionSection />
-      <ServicesAdvance />
-      <ReviewList />
     </>
   );
 }

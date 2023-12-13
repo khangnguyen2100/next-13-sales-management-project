@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Quicksand } from 'next/font/google';
 
+import '@/assets/Icons/css/all.css';
 import './globals.css';
 import { Providers } from './providers';
 

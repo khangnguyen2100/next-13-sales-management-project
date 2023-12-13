@@ -4,5 +4,5 @@ export async function getNews() {
     cache: 'no-store',
   });
   const data = await res.json();
-  return data.danhsachtin;
+  return data.data;
 }

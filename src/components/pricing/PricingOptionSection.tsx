@@ -66,7 +66,7 @@ const PricingOptionSection = () => {
         >
           Gói dịch vụ
         </HeadingWithDot>
-        <h2 className='text-[40px] text-typo-1 mdd:text-3xl'>
+        <h2 className='text-[30px] text-typo-1 mdd:text-3xl'>
           Chọn gói phù hợp với nhu cầu của bạn
         </h2>
       </div>
@@ -75,12 +75,15 @@ const PricingOptionSection = () => {
         <div className='col-span-1 w-full bg-section-5 px-7 py-11 text-center text-typo-1 shadow-md lgd:px-4 mdd:py-8'>
           <h3 className='text-[32px] text-typo-1'>Basic</h3>
           <Divider className='!my-6' />
-          <h3 className='text-[40px]'>
+          <h3 className='text-[30px]'>
             159.000 VNĐ<span className='text-2xl'>/ tháng</span>
           </h3>
           <div className='text-center leading-[2.5] text-typo-3'>
             <p>
               Quản lý <strong className='text-typo-1'>1 cửa hàng</strong>
+            </p>
+            <p>
+              Quản lý <strong className='text-typo-1'>30 sản phẩm</strong>
             </p>
           </div>
           <ButtonLink
@@ -100,15 +103,22 @@ const PricingOptionSection = () => {
           <div className='transition-md flex-center absolute inset-x-0 top-0 z-[1] h-[50px] w-full bg-secondary text-center font-quicksand text-xl font-bold  text-white group-hover:-translate-y-full'>
             Phổ biến nhất
           </div>
-          <div className='relative z-[2] w-full bg-primary px-7 py-11 text-center text-white shadow-md lgd:px-4 mdd:py-8'>
+          <div className='relative z-[2] w-full bg-primary px-3 py-11 text-center text-white shadow-md lgd:px-4 mdd:py-8'>
             <h3 className='text-[32px] text-white'>Advanced</h3>
             <Divider className='!my-6 bg-white' />
             <h3 className='text-[40px]'>
               229.000 VNĐ<span className='text-2xl'>/ tháng</span>
             </h3>
-            <div className='text-center leading-[2.5] text-typo-3'>
+            <div className='text-center leading-[2.5] text-typo-1'>
               <p>
-                Quản lý <strong className='text-typo-1'>3 cửa hàng</strong>
+                Quản lý <strong className='text-white'>3 cửa hàng</strong>
+              </p>
+              <p>
+                Quản lý <strong className='text-white'>60 sản phẩm</strong>
+              </p>
+              <p>
+                Nhận được sự hỗ trợ
+                <strong className='text-white'> 24/7</strong>
               </p>
             </div>
             <ButtonLink
@@ -128,13 +138,13 @@ const PricingOptionSection = () => {
         <div className='col-span-1 w-full bg-section-5 px-7 py-11 text-center text-typo-1 shadow-md lgd:px-4 mdd:py-8'>
           <h3 className='text-[32px] text-typo-1'>Pro</h3>
           <Divider className='!my-6' />
-          <h3 className='text-[40px]'>
+          <h3 className='text-[30px]'>
             299.000 VNĐ<span className='text-2xl'>/ tháng</span>
           </h3>
           <div className='text-center leading-[2.5] text-typo-3'>
             <p>
               <strong className='text-typo-1'>
-                Tạo cửa hàng không giới hạn
+                Số lượng cửa hàng không giới hạn
               </strong>
             </p>
           </div>
