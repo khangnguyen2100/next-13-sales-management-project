@@ -28,7 +28,7 @@ const ButtonLink = (props: Props) => {
       type={type}
       loading={loading || undefined}
       className={clsx(
-        'transition-lg border-none px-7  py-4 text-center text-lg font-semibold hover:text-white',
+        'transition-lg border-none px-7  py-4 text-center text-lg font-semibold hover:text-white mdd:px-4 mdd:py-2',
         color === 'primary'
           ? 'bg-primary text-white'
           : color === 'secondary'

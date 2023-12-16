@@ -12,12 +12,12 @@ const HomeHeroBanner = () => {
     <HeroBanner imageSrc={BannerImg} height='medium'>
       <div className='mb-3 flex items-center gap-x-[7px]'>
         <div className='h-3 w-3 bg-secondary'></div>
-        <p className='text-lg text-white'>
+        <p className='text-white md:text-lg'>
           Chào mừng bạn đến với
           <span className='font-semibold text-secondary'> BeeSmart</span>
         </p>
       </div>
-      <h1 className='text-5xl font-bold leading-[1.1] text-white md:text-[40px]'>
+      <h1 className='text-3xl font-bold leading-[1.1] text-white md:text-4xl lg:text-[40px] xl:text-5xl '>
         <span className='block'>Đối tác</span>
         <span className='block'>
           <span className='text-secondary'>Quản lí </span>
@@ -38,7 +38,7 @@ const HomeHeroBanner = () => {
             width={60}
             height={60}
             alt='play icon'
-            className=' transition-sm group-hover:scale-[1.05]'
+            className=' transition-sm h:10 group-hover:scale-[1.05] mdd:w-10'
           />
           <div className='flex flex-col'>
             <p className='text-lg font-medium text-white'>Khám Phá Ngay</p>
