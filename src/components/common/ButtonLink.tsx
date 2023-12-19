@@ -42,7 +42,11 @@ const ButtonLink = (props: Props) => {
       title={title}
     >
       {href ? (
-        <Link href={href} className='text-inherit' title={title}>
+        <Link
+          href={href}
+          className='block h-full w-full text-center text-inherit'
+          title={title}
+        >
           {children}
         </Link>
       ) : (
