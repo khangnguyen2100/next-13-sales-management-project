@@ -76,7 +76,7 @@ function RecentNews() {
                     <ButtonLink
                       color='primary'
                       href='#!'
-                      className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm '
+                      className='mobile w-full rounded-none border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
                       title='Ngày tạo'
                     >
                       {formatDate(created_at)}
@@ -84,17 +84,19 @@ function RecentNews() {
                     <ButtonLink
                       color='secondary'
                       href='#!'
-                      className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
+                      className='mobile w-full rounded-none border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
                       title='Tác giả'
                     >
+                      <i className='fa-regular fa-user-pen mr-2'></i>
                       Admin
                     </ButtonLink>
                     <ButtonLink
                       color='secondary'
                       href='#!'
-                      className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
+                      className='mobile w-full rounded-none border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
                       title='Lượt xem'
                     >
+                      <i className='fa-solid fa-eye mr-2'></i>
                       {view}
                     </ButtonLink>
                   </div>

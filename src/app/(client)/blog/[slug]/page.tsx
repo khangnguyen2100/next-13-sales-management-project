@@ -30,7 +30,7 @@ export default async function BlogDetail({
           dangerouslySetInnerHTML={{ __html: blogItem.noiDung }}
           className='blogContainer'
         ></div>
-        <CommentBlock data={comments} />
+        <CommentBlock data={comments} idTin={blogItem.id} />
       </div>
       <div className='col-span-4 mt-5 flex h-fit flex-col gap-y-5 shadow-sm'>
         <h3 className='block text-center'>Bài viết liên quan</h3>

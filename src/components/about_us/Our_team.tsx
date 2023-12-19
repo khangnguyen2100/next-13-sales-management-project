@@ -97,7 +97,7 @@ function OurTeam() {
         {TeamMember.map((member, index) => {
           return (
             <div
-              className='group relative col-span-4 mx-auto flex w-full mdd:col-span-6 mobile:col-span-12'
+              className='col-span-4 mx-auto flex w-full mdd:col-span-6 mobile:col-span-12'
               key={index}
             >
               <Image
@@ -108,19 +108,6 @@ function OurTeam() {
                 className='w-full object-cover'
               ></Image>
               <div className='transition-sm absolute inset-0 bg-[#6B77E5] opacity-0 group-hover:opacity-70'></div>
-              <div className='transition-sm absolute left-1/2 top-1/3 flex translate-x-[-50%] translate-y-[-50%] gap-x-3 opacity-0 group-hover:top-1/2 group-hover:opacity-100'>
-                {member.links.map((link, index) => {
-                  return (
-                    <Link
-                      href={link.linkTo}
-                      key={index}
-                      className='relative block h-[50px] w-[50px]'
-                    >
-                      <Image src={link.icon} fill alt=''></Image>
-                    </Link>
-                  );
-                })}
-              </div>
               <div className='absolute bottom-[10%] left-[10%] w-[80%] translate-y-[-10%] rounded-sm bg-white px-5 py-3 text-center opacity-80'>
                 <h3 className='text-xl'>{member.name}</h3>
                 <p className='mt-3 text-base text-typo-1'>{member.position}</p>
