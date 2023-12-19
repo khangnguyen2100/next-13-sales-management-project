@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import BannerImg from 'public/images/Home_Banner.jpg';
 import ButtonLink from '@/components/common/ButtonLink';
 import HeroBanner from '@/components/common/HeroBanner';
-import BannerImg from 'public/images/z4902222891821_b0d8852404d097cd5f67895a979f71ea.jpg';
 import PlayVideoIcon from 'public/icons/play-video.svg';
 
 const HomeHeroBanner = () => {
