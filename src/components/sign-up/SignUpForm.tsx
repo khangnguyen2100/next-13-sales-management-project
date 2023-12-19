@@ -122,8 +122,8 @@ const SignUpForm = () => {
         });
         // navigate to beesmart-admin-stage.vercel.app
         window.location.href =
-          process.env.NEXT_PUBLIC_HOST_URL ||
-          'https://beesmart-admin-stage.vercel.app';
+          `${process.env.NEXT_PUBLIC_HOST_URL}/dang-xuat` ||
+          'https://beesmart-admin-stage.vercel.app/dang-xuat';
       } else {
         enqueueSnackbar(
           res?.error?.email?.[0] || res?.data?.message || 'Đăng ký thất bại',
