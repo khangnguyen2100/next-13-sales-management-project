@@ -1,6 +1,6 @@
 'use client';
 import { enqueueSnackbar } from 'notistack';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
 import { Box, TextField } from '@/components/lib/mui';
 
@@ -12,7 +12,17 @@ type CommentProps = {
   hoTen: string;
   idTin: string;
 };
-
+async function getComments(idTin: string) {
+  // Fetch data from external API
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/binh-luan?idTin=${idTin}`,
+    {
+      cache: 'no-store',
+    },
+  );
+  const data = await res.json();
+  return data.data;
+}
 function CommentBlock({
   data,
   idTin,
@@ -29,7 +39,7 @@ function CommentBlock({
   };
   const [formValue, setFormValue] = useState<CommentProps>(initForm);
   const [isLoading, setIsLoading] = useState(false);
-
+  const [comments, setComments] = useState([]);
   const handleChangeForm = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -76,6 +86,13 @@ function CommentBlock({
         console.error('Error:', error);
       });
   };
+  useEffect(() => {
+    (async () => {
+      const data = await getComments(idTin);
+      console.log(data);
+      setComments(data);
+    })();
+  }, [isLoading]);
   return (
     <>
       <div className='mt-8 rounded-xl bg-[#f9fafb] py-4 shadow-lg'>
@@ -142,10 +159,10 @@ function CommentBlock({
           Bình luận bài viết
         </div>
         <div className='max-h-[800px] min-h-[100px] overflow-y-scroll '>
-          {data.length == 0 ? (
+          {comments.length == 0 ? (
             <></>
           ) : (
-            data.map((item, index) => {
+            comments.map((item: any, index) => {
               return (
                 <div
                   className='mb-4 rounded-lg bg-[#fff] px-6 pb-4 text-black shadow-2xl'
@@ -156,6 +173,7 @@ function CommentBlock({
                       {`${item.hoTen} - ${item.email}`}
                     </h3>
                     <p className='text-gray-600'>{`${item.ngayDang
+                      .split(' ')[0]
                       .split('-')
                       .reverse()
                       .join('-')}`}</p>
