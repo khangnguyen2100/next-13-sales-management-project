@@ -66,7 +66,7 @@ const contacts: ContactItemProp[] = [
     icon: PhoneIcon,
   },
   {
-    heading: 'Mail Us',
+    heading: 'Email',
     description: 'beesmart301@gmail.com',
     icon: MailIcon,
   },

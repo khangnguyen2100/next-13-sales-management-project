@@ -10,13 +10,13 @@ const Introduction = () => {
     <div className='my-24 flex items-center gap-x-6 gap-y-16 lg:gap-x-[70px] mdd:flex-col'>
       {/* image side */}
       <div className='h-full bg-gray-100 md:w-1/2 xl:w-[40%]'>
-        <div className='ml-auto mr-6 px-4 py-8 md:max-w-[456px] md:py-24  lg:mr-12'>
+        <div className='ml-auto mr-6 px-4 py-8 md:max-w-[456px] md:py-24  lg:mr-12 mdd:mr-0'>
           <Image
             src={IntroductionImg}
             height={300}
             width={424}
             alt='intro'
-            className='mx-auto object-cover'
+            className='mx-auto w-full object-cover'
           />
           <h3 className='mb-3 mt-5 text-3xl'>Phong cách làm việc</h3>
           <p className='mb-5 text-typo-3'>

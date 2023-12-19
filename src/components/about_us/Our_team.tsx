@@ -97,15 +97,15 @@ function OurTeam() {
         {TeamMember.map((member, index) => {
           return (
             <div
-              className='group relative col-span-4 mx-auto flex mdd:col-span-6 mobile:col-span-12'
+              className='group relative col-span-4 mx-auto flex w-full mdd:col-span-6 mobile:col-span-12'
               key={index}
             >
               <Image
                 src={member.img}
                 width={386}
-                height={532}
+                height={432}
                 alt={member.name}
-                className='object-cover'
+                className='w-full object-cover'
               ></Image>
               <div className='transition-sm absolute inset-0 bg-[#6B77E5] opacity-0 group-hover:opacity-70'></div>
               <div className='transition-sm absolute left-1/2 top-1/3 flex translate-x-[-50%] translate-y-[-50%] gap-x-3 opacity-0 group-hover:top-1/2 group-hover:opacity-100'>

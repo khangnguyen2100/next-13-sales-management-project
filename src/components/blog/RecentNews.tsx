@@ -1,4 +1,8 @@
+'use client';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 
 import { formatDate } from '@/utils/formatDate';
 import { getNews } from '@/utils/tin/getNews';
@@ -21,8 +25,26 @@ export type RecentNewType = {
   deleted_at: string;
 };
 
-async function RecentNews() {
-  const blogData = await getNews();
+function RecentNews() {
+  // const blogData =  getNews();
+  const [blogData, setBlogData] = useState<any>([]);
+  const [currentPage, setCurretPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const handleLoadMore = () => {
+    setIsLoading(true);
+    setCurretPage(prev => prev + 1);
+  };
+  useEffect(() => {
+    (async () => {
+      const { data: blogs, maxPage } = await getNews(currentPage);
+      console.log(maxPage);
+      console.log(currentPage);
+      setBlogData((prev: any) => [...prev, ...blogs]);
+      setIsLoading(false);
+      if (currentPage >= maxPage) setIsHidden(true);
+    })();
+  }, [currentPage]);
   if (blogData && blogData?.length > 0)
     return (
       <div className='mb-24 mt-10 flex flex-col mdd:px-4'>
@@ -40,19 +62,22 @@ async function RecentNews() {
                 className='col-span-6 flex flex-col gap-y-3 mdd:col-span-12 mobile:max-w-[288px]'
                 key={index}
               >
-                <div className='mobile:max-w-[288px]'>
-                  <Image
-                    src={`${process.env.NEXT_PUBLIC_API_URL}/${urlHinh}`}
-                    alt={tieuDe}
-                    className='mx-auto w-full object-cover'
-                    width={500}
-                    height={300}
-                  ></Image>
+                <div className='flex flex-col mobile:max-w-[288px]'>
+                  <Link href={`/blog/${slug}`} className='h-[300px]'>
+                    <Image
+                      src={`${process.env.NEXT_PUBLIC_API_URL}/${urlHinh}`}
+                      alt={tieuDe}
+                      className='mx-auto w-full shrink-0 object-cover shadow-xl'
+                      width={500}
+                      height={300}
+                    ></Image>
+                  </Link>
                   <div className='flex w-full'>
                     <ButtonLink
                       color='primary'
                       href='#!'
                       className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm '
+                      title='Ngày tạo'
                     >
                       {formatDate(created_at)}
                     </ButtonLink>
@@ -60,6 +85,7 @@ async function RecentNews() {
                       color='secondary'
                       href='#!'
                       className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
+                      title='Tác giả'
                     >
                       Admin
                     </ButtonLink>
@@ -67,15 +93,21 @@ async function RecentNews() {
                       color='secondary'
                       href='#!'
                       className='mobile w-full border border-gray-500 mobile:px-4 mobile:py-1 mobile:text-sm'
+                      title='Lượt xem'
                     >
                       {view}
                     </ButtonLink>
                   </div>
                 </div>
-                <h2 className=' w-full  text-2xl font-semibold mdd:text-xl'>
-                  {tieuDe}
-                </h2>
-                <p className='line-clamp-3 overflow-hidden text-ellipsis'>
+                <Link
+                  href={`/blog/${slug}`}
+                  className='transition-md text-black hover:text-[#6B77E5]'
+                >
+                  <h2 className=' w-full text-2xl font-semibold mdd:text-xl'>
+                    {tieuDe}
+                  </h2>
+                </Link>
+                <p className='mt-auto line-clamp-3 overflow-hidden text-ellipsis'>
                   {tomTat}
                 </p>
                 <ButtonLink
@@ -83,12 +115,22 @@ async function RecentNews() {
                   href={`/blog/${slug}`}
                   className='transition-sm pl-0 !text-left hover:text-primary '
                 >
-                  Watch More
+                  Xem thêm
                 </ButtonLink>
               </div>
             );
           })}
         </div>
+        <ButtonLink
+          color='secondary'
+          className={clsx('mx-auto mt-5 max-w-[150px]', {
+            hidden: isHidden,
+          })}
+          onClick={handleLoadMore}
+          loading={isLoading}
+        >
+          Xem thêm
+        </ButtonLink>
       </div>
     );
   return <Loading></Loading>;

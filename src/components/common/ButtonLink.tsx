@@ -11,6 +11,7 @@ type Props = {
   type?: 'submit' | 'button';
   onClick?: () => void;
   loading?: boolean;
+  title?: string;
 };
 
 const ButtonLink = (props: Props) => {
@@ -22,6 +23,7 @@ const ButtonLink = (props: Props) => {
     type = 'button',
     onClick,
     loading,
+    title,
   } = props;
   return (
     <Button
@@ -37,9 +39,10 @@ const ButtonLink = (props: Props) => {
         className,
       )}
       onClick={onClick}
+      title={title}
     >
       {href ? (
-        <Link href={href} className='text-inherit'>
+        <Link href={href} className='text-inherit' title={title}>
           {children}
         </Link>
       ) : (
