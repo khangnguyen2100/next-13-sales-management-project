@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from 'next/image';
-import Link from 'next/link';
 
 import Twiter from 'public/icons/Twiter.svg';
 import Fb from 'public/icons/Fb.svg';
