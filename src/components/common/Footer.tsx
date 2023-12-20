@@ -104,7 +104,7 @@ const ColLinks = ({ props }: { props: FooterColumnLink }) => {
 const ContactItem = ({ props }: { props: ContactItemProp }) => {
   const { heading, description, icon } = props;
   return (
-    <div className='flex items-center gap-x-[10px]'>
+    <div className='flex w-full items-center gap-x-[10px]'>
       {/* icon */}
       <div className='flex h-[68px] w-[68px] items-center justify-center rounded-full bg-section-3 mdd:h-[50px] mdd:w-[50px]'>
         <Image src={icon} width={26} height={26} alt={heading} />
@@ -139,7 +139,7 @@ const Footer = () => {
 
         <div className='flex items-start justify-between gap-y-10 mdd:flex-col'>
           {/* links */}
-          <div className='flex w-full md:gap-x-16 mdd:justify-between'>
+          <div className='flex w-full md:gap-x-16 mdd:justify-around mobile:justify-around'>
             {/* cols */}
             {footerLinks.map((col, i) => (
               <Fragment key={i}>

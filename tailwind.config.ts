@@ -15,7 +15,8 @@ const config: Config = {
       screens: {
         xld: { max: '1280px' },
         lgd: { max: '1020px' },
-        mdd: { max: '768px' },
+        mdd: { max: '770px' },
+        mdu: { min: '770px' },
         smd: { max: '640px' },
         mobile: { max: '480px' },
       },
