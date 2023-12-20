@@ -87,7 +87,7 @@ const PricingOptionSection = () => {
             </p>
             <p>
               Nhận được sự hỗ trợ
-              <strong className='text-white'> 24/7</strong>
+              <strong className='text-typo-1'> 24/7</strong>
             </p>
           </div>
           <ButtonLink
@@ -150,6 +150,15 @@ const PricingOptionSection = () => {
               <strong className='text-typo-1'>
                 Số lượng cửa hàng không giới hạn
               </strong>
+            </p>
+            <p>
+              <strong className='text-typo-1'>
+                Số lượng sản phẩm không giới hạn
+              </strong>
+            </p>
+            <p>
+              Nhận được sự hỗ trợ
+              <strong className='text-typo-1'> 24/7</strong>
             </p>
           </div>
           <ButtonLink
