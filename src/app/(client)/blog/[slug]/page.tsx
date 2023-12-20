@@ -24,7 +24,7 @@ export default async function BlogDetail({
   const { data: news } = await getAllNews();
   return (
     <div className='mx-auto mb-24 mt-10 grid max-w-7xl grid-cols-12 flex-col gap-x-10 '>
-      <div className='col-span-8 flex flex-col gap-y-2'>
+      <div className='col-span-8 flex flex-col gap-y-2 mdd:col-span-12 mdd:gap-y-5 mdd:px-5'>
         <h1 className='text-4xl'>{blogItem.tieuDe}</h1>
         <div
           dangerouslySetInnerHTML={{ __html: blogItem.noiDung }}
@@ -32,7 +32,7 @@ export default async function BlogDetail({
         ></div>
         <CommentBlock data={comments} idTin={blogItem.id} />
       </div>
-      <div className='col-span-4 mt-5 flex h-fit flex-col gap-y-5 shadow-sm'>
+      <div className='col-span-4 mt-5 flex h-fit flex-col gap-y-5 shadow-sm mdd:col-span-12'>
         <h3 className='block text-center'>Bài viết liên quan</h3>
         <div className='flex flex-col gap-y-5'>
           {news?.map((item: RecentNewType, index: number) => {

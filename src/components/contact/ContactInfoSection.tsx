@@ -45,7 +45,13 @@ const ContactItem = ({ props }: { props: ContactItemProp }) => {
 const ContactInfoSection = () => {
   return (
     <div className='container my-24 flex items-center gap-[50px] lgd:flex-col'>
-      <Image src={Image1} width={585} height={454} alt='contact with us' />
+      <Image
+        src={Image1}
+        width={585}
+        height={454}
+        alt='contact with us'
+        className='w-full object-cover'
+      />
       {/* content side */}
       <div className='flex flex-col gap-8'>
         {/* header */}

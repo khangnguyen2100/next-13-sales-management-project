@@ -114,13 +114,13 @@ const PricingOptionSection = () => {
               229.000 VNĐ<span className='text-2xl'>/ tháng</span>
             </h3>
             <div className='text-center leading-[2.5] text-typo-1'>
-              <p>
+              <p className='text-gray-200'>
                 Quản lý <strong className='text-white'>3 cửa hàng</strong>
               </p>
-              <p>
+              <p className='text-gray-200'>
                 Quản lý <strong className='text-white'>60 sản phẩm</strong>
               </p>
-              <p>
+              <p className='text-gray-200'>
                 Nhận được sự hỗ trợ
                 <strong className='text-white'> 24/7</strong>
               </p>
