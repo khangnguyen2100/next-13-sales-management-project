@@ -70,6 +70,7 @@ const formSchema = yup
   .required();
 
 const SignUpForm = () => {
+  const [loading, setLoading] = useState(false);
   const initForm: FormValue = {
     fullName: '',
     email: '',
@@ -115,11 +116,13 @@ const SignUpForm = () => {
       quan: districtName,
     };
     try {
+      setLoading(prev => !prev);
       const res = await authAPI.signUp(transformData);
       if (res?.status) {
         enqueueSnackbar(res?.message || 'Đăng ký thành công', {
           variant: 'success',
         });
+        setLoading(prev => !prev);
         // navigate to beesmart-admin-stage.vercel.app
         window.location.href =
           `${process.env.NEXT_PUBLIC_HOST_URL}/dang-xuat` ||
@@ -342,6 +345,7 @@ const SignUpForm = () => {
           type='submit'
           color='primary'
           className='col-span-2 mx-auto mt-4 w-fit cursor-pointer'
+          loading={loading}
         >
           Đăng ký
         </ButtonLink>
