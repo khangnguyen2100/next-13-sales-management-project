@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import IntroductionImg from 'public/images/home/teamIMG.jpg';
 import VCheck from 'public/icons/v-check.svg';
+
 import ButtonLink from '../common/ButtonLink';
 
 const Introduction = () => {
@@ -27,7 +28,7 @@ const Introduction = () => {
             tác đồng hành đáng tin cậy, giúp doanh nghiệp của bạn vươn tới những
             đỉnh cao mới trong sự đổi mới kinh tế.
           </p>
-          <ButtonLink color='secondary' type='button' href='/contact'>
+          <ButtonLink color='secondary' type='button' href='/sign-up'>
             Dùng Thử Miễn Phí
           </ButtonLink>
         </div>
