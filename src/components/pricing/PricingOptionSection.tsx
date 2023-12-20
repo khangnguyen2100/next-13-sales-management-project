@@ -85,6 +85,10 @@ const PricingOptionSection = () => {
             <p>
               Quản lý <strong className='text-typo-1'>30 sản phẩm</strong>
             </p>
+            <p>
+              Nhận được sự hỗ trợ
+              <strong className='text-white'> 24/7</strong>
+            </p>
           </div>
           <ButtonLink
             className='mt-8 cursor-pointer'
